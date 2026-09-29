@@ -23,10 +23,22 @@ export const contactInfo: ContactInfo = {
   resumePdfUrl: "./resume.html",
   executiveSummary: [
     "Strategic and hands-on architectural leader with over 20 years of experience spanning application architecture, modern cloud data lakehouses, identity/security architecture, and mission-critical legacy modernization.",
-    "Proven track record spearheading enterprise data strategy at Cubic Transportation Systems (AWS lakehouse, cross-cloud Azure VPN ingestion, Flink real-time observability, Kafka/MSK event streaming) and 15 years at Cognizant executing complex core banking modernizations for Tier-1 institutions (JPMorgan Chase, Credit Suisse).",
-    "Expert in translating executive business vision into high-throughput systems, cost-optimized Cloud FinOps architectures, 8-role RACI governance runbooks, and zero-downtime cutover playbooks."
+    "Proven track record spearheading enterprise data platform strategy at Cubic Transportation Systems (AWS lakehouse, cross-cloud Azure VPN ingestion, Flink real-time observability, Kafka/MSK event streaming) and 15 years at Cognizant executing complex core banking modernizations for Tier-1 institutions (JPMorgan Chase, Credit Suisse).",
+    "Owns end-to-end architecture for the B2B/employer-benefit program vertical of the platform — from program configuration and funds-pool/billing logic through fraud controls, notifications, and partner integrations — combining deep domain expertise in transit fare & payments, B2B program administration, and identity/data-privacy compliance.",
+    "Early adopter of AI-assisted SDLC practices (GitHub Copilot, Claude/Claude Code) alongside Generative AI (RAG) models, cutting development and documentation cycles across Java/Spring Boot and Terraform workstreams."
   ]
 };
+
+export const domainExpertise: string[] = [
+  "Transit Fare & Payments Systems",
+  "B2B / Employer Benefit Program Administration",
+  "Funds Pool & Program Billing",
+  "Fraud & Risk Management",
+  "Identity & Data Privacy (GDPR/DPIA)",
+  "Concession & Eligibility Programs",
+  "Banking & Financial Services",
+  "Cloud Cost & Modernization Strategy"
+];
 
 export const credentialBadges: CredentialBadge[] = [
   { label: "20+ Years Enterprise Exp", iconName: "Clock", category: "experience", highlight: true },
@@ -36,7 +48,7 @@ export const credentialBadges: CredentialBadge[] = [
   { label: "Apache Flink & Kafka/MSK", iconName: "Activity", category: "tech" },
   { label: "AWS DMS & GoldenGate CDC", iconName: "Database", category: "tech" },
   { label: "Mainframe Modernization", iconName: "Server", category: "tech" },
-  { label: "Cloud FinOps & Governance", iconName: "ShieldCheck", category: "leadership" }
+  { label: "Cloud FinOps (~70% Spend Cut)", iconName: "ShieldCheck", category: "leadership", highlight: true }
 ];
 
 export const careerStages: CareerStage[] = [
@@ -118,10 +130,16 @@ export const careerStages: CareerStage[] = [
 
 export const metricHighlights: MetricItem[] = [
   {
-    value: "20+ Yrs",
-    label: "Enterprise Architecture",
-    subtext: "From Mainframe Estates to Modern Cloud Lakehouses",
-    iconName: "Compass"
+    value: "~70% Cut",
+    label: "Cloud FinOps Savings",
+    subtext: "Managed VPN + Kinesis vs Direct Connect/MSK Infrastructure",
+    iconName: "DollarSign"
+  },
+  {
+    value: "20+ Epics",
+    label: "B2B Vertical Ownership",
+    subtext: "Architect-of-Record for Fare, Billing & Partner Integrations",
+    iconName: "Layers"
   },
   {
     value: "750+ Lines",
@@ -130,16 +148,10 @@ export const metricHighlights: MetricItem[] = [
     iconName: "FileCode"
   },
   {
-    value: "45+ Designs",
-    label: "Enterprise Solutions",
-    subtext: "Confluence-Tracked Architecture Designs & Change Approvals",
-    iconName: "Layers"
-  },
-  {
-    value: "15 Yrs",
-    label: "Cognizant Leadership",
-    subtext: "Tier-1 Financials: JPMorgan Chase, Credit Suisse, QVC",
-    iconName: "ShieldCheck"
+    value: "20+ Yrs",
+    label: "Enterprise Architecture",
+    subtext: "From Mainframe Estates to Modern Cloud Lakehouses",
+    iconName: "Compass"
   }
 ];
 
@@ -149,7 +161,7 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
     title: "Cross-Cloud Azure-to-AWS Data Lake Ingestion",
     category: "cross-cloud",
     company: "Cubic Transportation Systems",
-    summary: "Architected the target ingestion blueprint extending the AWS data lake to capture Azure-hosted Kafka event streams and Oracle CDC transactional data over a secure Site-to-Site dual-tunnel VPN.",
+    summary: "Architected the target ingestion blueprint extending the AWS data lake to capture Azure-hosted Kafka event streams and Oracle CDC transactional data over a secure Site-to-Site dual-tunnel VPN, cutting recurring network spend by ~70%.",
     problemStatement: "Critical transit device events and transactional payloads resided across heterogeneous Azure subscriptions, threatening fragmented analytics and requiring expensive dual pipeline maintenance without a standardized cross-cloud ingestion fabric.",
     topology: {
       nodes: [
@@ -162,7 +174,7 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
       flowSummary: "Azure workloads traverse dual IPsec VPN tunnels into a self-managed Lambda Kafka ESM & Oracle GoldenGate CDC engine, landing directly in Kinesis Data Streams to feed existing DynamoDB, SQS, and ServiceNow alerting."
     },
     architecturalDecisions: [
-      "Cost-Benefit Analysis: Formulated comprehensive build-vs-buy model comparing Site-to-Site VPN vs. AWS Direct Connect / Azure ExpressRoute, optimizing initial CAPEX for the modernization phase.",
+      "Cloud FinOps & Infrastructure Modernization: Formulated trade-off analysis demonstrating ~70% recurring cost savings using managed Site-to-Site VPN and on-demand Kinesis instead of dedicated Direct Connect / ExpressRoute and self-managed Kafka clusters, accelerating migration to serverless AWS services.",
       "Consumer Preservation: Ingested Azure streams directly into Kinesis to reuse the entire downstream device-event, heartbeat, and alerting ecosystem without rewriting consumers.",
       "Resiliency: Engineered dual-tunnel failover with automated CloudWatch dead-letter monitoring and IAM least-privilege role scoping."
     ],
@@ -178,7 +190,7 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
     },
     quantifiableImpact: {
       performance: "Sub-second event propagation from Azure edge to AWS analytics lakehouse",
-      finOpsAndTco: "Avoided dedicated Direct Connect circuit costs during pilot, saving 40% in initial networking overhead",
+      finOpsAndTco: "~70% reduction in recurring network and streaming-platform spend versus Direct Connect and self-managed Kafka",
       reliabilityAndGovernance: "100% preservation of downstream alerting SLA with zero consumer rebuilds"
     }
   },
@@ -359,10 +371,18 @@ export const workExperience: ExperienceRole[] = [
     ],
     summary: [
       "Leading data architecture strategy for the enterprise platform, spanning database migration (AWS DMS, Oracle GoldenGate), streaming event architectures (Kafka/MSK/Kinesis), data lake governance, and identity/access federation.",
-      "Architected cross-cloud Azure-to-AWS ingestion, Flink-based real-time device observability, and authored 750+ line production database migration runbooks with 8-role RACI.",
-      "Previously spearheaded software architecture across enterprise transit platforms, authoring or co-approving 45+ Confluence-tracked change designs spanning B2B billing, concession integrations, fraud controls, and MFA security."
+      "Owned end-to-end software architecture for the B2B/employer-benefit program vertical across 20+ Jira epics and capabilities — from program configuration and funds-pool/billing logic through low-balance notifications, card replacement/token sync, and a B2B shipping (FedEx) integration.",
+      "Advised platform and engineering leadership on AWS cost modeling and phased delivery roadmaps, including a connectivity trade-off analysis showing managed Site-to-Site VPN and on-demand Kinesis cutting recurring network/streaming spend by ~70% versus Direct Connect and self-managed Kafka.",
+      "Spearheaded software architecture across enterprise transit platforms, authoring or co-approving 45+ Confluence-tracked change designs spanning B2B billing, concession integrations, fraud controls, and MFA security.",
+      "Adopted AI-assisted SDLC practices, using GitHub Copilot and Claude/Claude Code for code generation, code review, and technical documentation to shorten development cycles."
     ],
     keyProjects: [
+      {
+        name: "B2B Program Vertical Ownership",
+        category: "software-architecture",
+        description: "Acted as architect-of-record for the B2B/employer-benefit program vertical across 20+ epics and capabilities, from initial program-configuration and billing architecture through delivery, notifications, and partner shipping integration (FedEx) — serving as the primary technical and domain authority.",
+        tags: ["Architect-of-Record", "20+ Epics", "B2B Vertical", "FedEx Integration", "Funds Pool"]
+      },
       {
         name: "Enterprise Data Migration Runbooks (AWS DMS & Oracle GoldenGate)",
         category: "data-architecture",
@@ -370,10 +390,10 @@ export const workExperience: ExperienceRole[] = [
         tags: ["AWS DMS", "Oracle GoldenGate", "RACI Governance", "Zero-Downtime"]
       },
       {
-        name: "Azure-to-AWS Cross-Cloud Data Lake Ingestion",
+        name: "Azure-to-AWS Cross-Cloud Data Lake Ingestion (~70% Spend Cut)",
         category: "data-architecture",
-        description: "Architected extension of AWS data lake to ingest Azure-hosted Kafka and Oracle workloads via Lambda event-source mapping and OGG CDC over Site-to-Site VPN into Kinesis Data Streams.",
-        tags: ["Cross-Cloud", "Azure VPN", "Kinesis", "Kafka ESM", "Cost Modeling"]
+        description: "Architected extension of AWS data lake to ingest Azure-hosted Kafka and Oracle workloads via Lambda event-source mapping and OGG CDC over Site-to-Site VPN into Kinesis Data Streams, cutting recurring network/streaming spend by ~70%.",
+        tags: ["Cross-Cloud", "Azure VPN", "Kinesis", "70% Cost Cut", "Serverless"]
       },
       {
         name: "Flink-Based Device Observability Platform",
@@ -490,6 +510,20 @@ export const workExperience: ExperienceRole[] = [
 
 export const competencies: CompetencyCategory[] = [
   {
+    domain: "Domain & Industry Expertise",
+    iconName: "Briefcase",
+    skills: [
+      "Transit Fare & Payments Systems",
+      "B2B / Employer Benefit Program Administration",
+      "Funds Pool & Program Billing Logic",
+      "Fraud & Risk Controls (Velocity Checks)",
+      "Identity & Data Privacy (GDPR/DPIA Compliance)",
+      "Concession Rules & Eligibility Automation",
+      "Banking & Institutional Financial Services",
+      "Cloud Cost & Modernization Strategy"
+    ]
+  },
+  {
     domain: "Data Platform & Streaming",
     iconName: "Database",
     skills: [
@@ -510,19 +544,19 @@ export const competencies: CompetencyCategory[] = [
       "Terraform Infrastructure as Code (IaC)",
       "CI/CD Automation (Jenkins, Docker, GitHub Actions)",
       "CloudWatch, Distributed Tracing & DLQ Patterns",
-      "Cloud FinOps, TCO Modeling & Resource Governance"
+      "Cloud FinOps (~70% Spend Reduction Analysis)"
     ]
   },
   {
     domain: "Application & Microservices Architecture",
     iconName: "Layers",
     skills: [
+      "B2B Vertical Ownership (20+ Jira Epics)",
       "Microservices Decoupling & Strangler Fig Pattern",
       "Java 8-21 & Spring Boot Ecosystem",
       "RESTful API Design & OpenAPI / Swagger",
       "Domain-Driven Design (DDD) & Event-Driven Architecture",
-      "Angular 2-6+, TypeScript, Modern HTML5/CSS3",
-      "Enterprise Service Integration & CORBA"
+      "Angular 2-6+, TypeScript, Modern HTML5/CSS3"
     ]
   },
   {
@@ -538,6 +572,18 @@ export const competencies: CompetencyCategory[] = [
     ]
   },
   {
+    domain: "Applied AI & Engineering Leadership",
+    iconName: "BrainCircuit",
+    skills: [
+      "AI-Assisted SDLC (GitHub Copilot, Claude/Claude Code)",
+      "Generative AI & RAG Chatbots (Confluence/Swagger docs)",
+      "AI-Based Defect Root Cause Prediction",
+      "Technical Governance & 8-Role RACI Runbooks",
+      "45+ Confluence-Tracked Architecture Change Approvals",
+      "Team Mentorship (10+ Member Distributed Squads)"
+    ]
+  },
+  {
     domain: "Legacy Modernization & Mainframe",
     iconName: "Server",
     skills: [
@@ -546,18 +592,6 @@ export const competencies: CompetencyCategory[] = [
       "Zero-Downtime Data & Application Cutover",
       "REXX Scripting & Mainframe Automation",
       "MIPS Reduction & Licensing Optimization"
-    ]
-  },
-  {
-    domain: "Applied AI & Engineering Leadership",
-    iconName: "BrainCircuit",
-    skills: [
-      "Generative AI & RAG Chatbots (Confluence/Swagger docs)",
-      "AI-Based Defect Root Cause Prediction",
-      "Technical Governance & 8-Role RACI Runbooks",
-      "45+ Confluence-Tracked Architecture Change Approvals",
-      "Team Mentorship (10+ Member Distributed Squads)",
-      "Lean Delivery Modeling & Operating Model Design"
     ]
   }
 ];
@@ -604,7 +638,7 @@ export const videoBriefingChapters: VideoChapter[] = [
     title: "Modern Data Platform, Cross-Cloud Ingestion & Streaming (Cubic)",
     description: "Architecting cross-cloud Azure-to-AWS ingestion, Flink device telemetry, and 750+ line database migration runbooks with 8-role RACI.",
     keyTakeaways: [
-      "Azure-to-AWS Site-to-Site VPN CDC ingestion into Kinesis Data Streams",
+      "Azure-to-AWS Site-to-Site VPN CDC ingestion into Kinesis Data Streams cutting spend by ~70%",
       "Apache Flink sub-second sliding-window device fault detection",
       "Standardized zero-downtime database migration runbook and FinOps cost models"
     ]
@@ -626,8 +660,8 @@ export const videoBriefingChapters: VideoChapter[] = [
     title: "Enterprise Architecture Philosophy & Target Executive Impact",
     description: "What Pavan delivers in Enterprise Architect, Director, or VP of Software Engineering roles.",
     keyTakeaways: [
-      "Rigorous alignment between executive business goals and technical platforms",
-      "Culture of psychological safety, mentorship, and high architectural rigor",
+      "Architect-of-record for 20+ B2B epics with deep Transit Fare & Payment domain expertise",
+      "Early adopter of AI-assisted SDLC practices (GitHub Copilot, Claude/Claude Code)",
       "Immediate availability for transformative enterprise leadership roles"
     ]
   }

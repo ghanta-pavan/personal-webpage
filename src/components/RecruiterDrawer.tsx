@@ -98,16 +98,19 @@ export const RecruiterDrawer: React.FC<RecruiterDrawerProps> = ({ isOpen, onClos
             <h4 className="card-section-title">Verified Enterprise Wins</h4>
             <ul className="drawer-wins-list">
               <li>
-                <strong>750+ Line Migration Runbook:</strong> 8-role RACI framework and AWS DMS vs. GoldenGate decision matrix.
+                <strong>B2B Program Vertical Ownership:</strong> Architect-of-record across 20+ Jira epics and capabilities (program configuration, funds-pool billing, low-balance notifications, and FedEx partner shipping integration).
               </li>
               <li>
-                <strong>45+ Change Designs:</strong> Confluence-tracked architectural specifications across billing, concessions, and fraud.
+                <strong>~70% Recurring Spend Reduction:</strong> Cross-cloud connectivity and streaming trade-off analysis proving managed Site-to-Site VPN and Kinesis cuts ~70% recurring network and streaming spend vs Direct Connect and MSK.
               </li>
               <li>
-                <strong>Cross-Cloud Ingestion:</strong> Azure-to-AWS Site-to-Site VPN CDC pipeline saving 40% initial network CAPEX.
+                <strong>750+ Line Migration Runbook:</strong> 8-role RACI framework and AWS DMS vs. GoldenGate decision matrix adopted across DBA and DevOps teams.
               </li>
               <li>
-                <strong>Sub-Second Flink Observability:</strong> Real-time hardware heartbeat processing shrinking MTTR from 45m to &lt;1.2s.
+                <strong>45+ Change Designs:</strong> Confluence-tracked architectural specifications across B2B billing, concession integrations, and fraud controls.
+              </li>
+              <li>
+                <strong>AI-Assisted SDLC Velocity:</strong> Integrated GitHub Copilot and Claude/Claude Code across engineering squads, shortening delivery cycles.
               </li>
               <li>
                 <strong>Tier-1 Banking Modernization:</strong> Strangler Fig deconstruction for JPMC (money market) &amp; Credit Suisse (credit core).
@@ -156,6 +159,16 @@ export const RecruiterDrawer: React.FC<RecruiterDrawerProps> = ({ isOpen, onClos
                 <Printer size={15} />
                 <span>Print Official Executive Resume (PDF)</span>
               </button>
+              <a 
+                href="./resume.html" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-secondary btn-full"
+                style={{ textAlign: 'center', justifyContent: 'center' }}
+              >
+                <FileText size={15} />
+                <span>Open Standalone resume.html</span>
+              </a>
             </div>
           </div>
         </div>

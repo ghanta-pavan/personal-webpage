@@ -2,8 +2,9 @@ import React from 'react';
 
 /**
  * PrintResumeView
- * Faithfully embeds the exact layout and typography of resume.html.
+ * Faithfully embeds the exact layout and typography of resume_pavan.html.
  * Hidden on screen (.print-only), rendered exclusively during window.print()
+ * Styled with forced print-color-adjust and borders to guarantee highlighted tiles in PDF/print.
  */
 export const PrintResumeView: React.FC = () => {
   return (
@@ -16,6 +17,8 @@ export const PrintResumeView: React.FC = () => {
             font-size: 7.9pt;
             line-height: 1.24;
             display: block !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
           }
           .resume-print-container * {
             box-sizing: border-box;
@@ -101,24 +104,44 @@ export const PrintResumeView: React.FC = () => {
             border-radius: 3px;
           }
           .resume-print-container .growth span.current {
-            background: #12233f;
-            color: #fff;
+            background: #12233f !important;
+            background-color: #12233f !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            border: 1px solid #12233f !important;
+            box-shadow: inset 0 0 0 1000px #12233f !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
           }
           .resume-print-container .chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4px;
-            margin-top: 3px;
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 4px !important;
+            margin-top: 3px !important;
           }
+          /* Prominent, highlighted solid navy tiles for Core Competencies and Domain Expertise */
           .resume-print-container .chips span {
-            background: #12233f;
-            color: #fff;
-            font-size: 6.9pt;
-            font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 3px;
-            flex: 1 1 46%;
-            text-align: center;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background: #12233f !important;
+            background-color: #12233f !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: 6.9pt !important;
+            font-weight: 600 !important;
+            padding: 4px 6px !important;
+            border-radius: 3px !important;
+            text-align: center !important;
+            line-height: 1.25 !important;
+            min-height: 22px !important;
+            border: 1px solid #12233f !important;
+            box-shadow: inset 0 0 0 1000px #12233f !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+            box-sizing: border-box !important;
           }
           .resume-print-container .softskills {
             list-style: none;
@@ -171,12 +194,18 @@ export const PrintResumeView: React.FC = () => {
             color: #12233f;
           }
           .resume-print-container .footer-band {
-            background: #12233f;
-            color: #fff;
+            background: #12233f !important;
+            background-color: #12233f !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
             padding: 4px 8px;
             margin-top: 6px;
             font-weight: 700;
             font-size: 8.2pt;
+            box-shadow: inset 0 0 0 1000px #12233f !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
           }
           .resume-print-container .footer-content {
             padding: 3px 8px 0 8px;
@@ -209,7 +238,8 @@ export const PrintResumeView: React.FC = () => {
         <li>Experienced translating business requirements into technology strategy, including cost governance, tool-selection frameworks, and phased delivery roadmaps presented to Chief Architect and executive stakeholders; owns epic-level planning, estimation, and design-approval gates in Jira/Confluence for multi-team data platform programs.</li>
         <li>Demonstrated success in end-to-end project management, leading all phases from requirement analysis, effort estimation, and design to deployment and production support under Agile and DevOps frameworks, including test-plan authorship, security/tagging policy definition, and data lifecycle (hot/warm/cold) governance.</li>
         <li>Strong advocate of DevOps and CI/CD practices, implementing automation pipelines using Jenkins, Docker, Git/SVN, and Stonebranch Scheduler to enhance release velocity and reduce deployment risk.</li>
-        <li>Passionate about innovation and AI adoption, with hands-on experience designing Generative AI (RAG)-based chat models and AI-driven defect analysis and product configuration tools to accelerate software delivery.</li>
+        <li>Passionate about innovation and AI adoption, with hands-on experience designing Generative AI (RAG)-based chat models and AI-driven defect analysis and product configuration tools to accelerate software delivery, and an early adopter of AI-assisted SDLC practices (GitHub Copilot, Claude/Claude Code) for code generation, review, and documentation.</li>
+        <li>Owns end-to-end architecture for the B2B/employer-benefit program vertical of the platform — from program configuration and funds-pool/billing logic through fraud controls, notifications, and partner integrations — combining deep domain expertise in transit fare &amp; payments, B2B program administration, and identity/data-privacy compliance with the technical breadth above.</li>
         <li>Inspirational people leader and mentor, skilled at guiding diverse engineering teams, conducting code reviews, establishing development standards, and fostering a culture of quality and technical excellence.</li>
         <li>Recognized for delivering business-aligned, cost-efficient technology solutions, driving productivity improvements, enhancing customer satisfaction, and strengthening long-term client partnerships across global engagements.</li>
       </ul>
@@ -255,6 +285,17 @@ export const PrintResumeView: React.FC = () => {
             <span>Stakeholder &amp; Client Management</span>
             <span>Team Mentoring &amp; Technical Governance</span>
           </div>
+          <div className="section-title" style={{ marginTop: '8px' }}>Domain Expertise</div>
+          <div className="chips">
+            <span>Transit Fare &amp; Payments Systems</span>
+            <span>B2B / Employer Benefit Program Administration</span>
+            <span>Funds Pool &amp; Program Billing</span>
+            <span>Fraud &amp; Risk Management</span>
+            <span>Identity &amp; Data Privacy (GDPR/DPIA)</span>
+            <span>Concession &amp; Eligibility Programs</span>
+            <span>Banking &amp; Financial Services</span>
+            <span>Cloud Cost &amp; Modernization Strategy</span>
+          </div>
         </div>
       </div>
 
@@ -292,7 +333,7 @@ export const PrintResumeView: React.FC = () => {
         <div className="k">Security &amp; Code Quality:</div>
         <div>SonarQube, Fortify</div>
         <div className="k">AI &amp; Automation:</div>
-        <div>Generative AI (RAG, LLM integration), AI-based defect analysis and automation tools</div>
+        <div>Generative AI (RAG, LLM integration), GitHub Copilot, Claude/Claude Code (AI-assisted SDLC), AI-based defect analysis and automation tools</div>
         <div className="k">Operating Systems:</div>
         <div>Windows, UNIX, Mainframe (z/OS)</div>
       </div>
@@ -317,12 +358,14 @@ export const PrintResumeView: React.FC = () => {
           <li>Defined the end-to-end architecture for a Flink-based device observability platform — hot/cold path event processing, a Java service layer, and monitoring dashboards — and led the design-approval, Terraform deployment, and QA-validation stages across Hyderabad and NY environments as part of the platform's Jira-tracked delivery plan.</li>
           <li>Authoring migration runbooks and Terraform-based infrastructure patterns adopted by DBA, DevOps, and data engineering teams to standardize zero/near-zero downtime cutover across production databases.</li>
           <li>Own delivery planning and governance for the data platform's Jira epics (data lake platform provisioning, device observability, Azure-to-AWS pipeline, monitoring &amp; observability) — including scope/architecture/estimation sign-off, standardized repository and naming-convention guidelines, S3 data-lifecycle (hot/warm/cold) and security/tagging policy, and test-plan authorship.</li>
-          <li>Advising platform and engineering leadership on AWS cost modeling, tool-selection trade-offs, and phased delivery roadmaps for data lake and observability modernization initiatives.</li>
+          <li>Advising platform and engineering leadership on AWS cost modeling, tool-selection trade-offs, and phased delivery roadmaps for data lake and observability modernization initiatives — including a cross-cloud connectivity and streaming trade-off analysis showing a managed Site-to-Site VPN and on-demand Kinesis ingestion path cutting recurring network and streaming-platform spend by roughly 70% versus a Direct Connect/ExpressRoute and self-managed Kafka/MSK approach, while accelerating the platform's move off self-managed cluster infrastructure toward serverless, managed AWS services as part of its broader cloud modernization roadmap.</li>
           <li>Partnering with the Chief Architect and stakeholders on delivery-model design, sprint planning, and resource/risk modeling for multi-sprint data platform workstreams.</li>
+          <li>Owned end-to-end software architecture for the B2B/employer-benefit program vertical across 20+ Jira epics and capabilities — spanning self-service program configuration, program/product-type definition, funds-pool and enablement-fee logic, low-balance notifications, benefit-order processing, card-replacement/token-status synchronization, and a B2B shipping (FedEx) integration — acting as the primary architect and business-domain point of contact for that portfolio.</li>
           <li>Spearheaded software architecture design and solution delivery for enterprise-grade transport systems prior to the Data Architect role, authoring or co-approving 45+ Confluence-tracked change designs spanning B2B program billing/funds-pool logic, third-party concession and benefit-program integrations, account/fraud controls, and system-user multi-factor authentication, ensuring performance, scalability, and security across multi-module applications.</li>
           <li>Led requirement finalization, high-level architecture design, and effort estimation, providing end-to-end ownership of solution planning and delivery.</li>
           <li>Collaborated with cross-functional teams to prepare low-level design documents, define coding standards, and ensure technical consistency across modules.</li>
           <li>Conducted code reviews, performance optimization, and technical validation to uphold code quality, maintainability, and adherence to best practices.</li>
+          <li>Adopted AI-assisted SDLC practices, using GitHub Copilot and Claude/Claude Code for code generation, code review, and technical documentation to shorten development cycles alongside the team's Java/Spring Boot and Terraform workstreams.</li>
           <li>Designed and implemented POCs to embed Generative AI into existing platforms—leveraging RAG (Retrieval-Augmented Generation) to build chatbots trained on Confluence pages, Swagger documentation, and product user content.</li>
           <li>Developed AI-driven solutions for defect analysis and root cause prediction, improving issue resolution efficiency and defect turnaround time.</li>
           <li>Mentored a 10-member development team on technical design, secure coding, and Agile delivery; ensuring smooth coordination between onsite and offshore teams.</li>
@@ -345,6 +388,7 @@ export const PrintResumeView: React.FC = () => {
         {/* Software Architecture Key Projects */}
         <div className="subhead">Key Projects – Software Architecture</div>
         <ul>
+          <li><span className="proj-name">B2B Program Vertical Ownership:</span> Acted as architect-of-record for the B2B/employer-benefit program vertical across 20+ epics and capabilities, from initial program-configuration and billing architecture through delivery, notifications, and partner shipping integration — the primary technical and domain authority for that portfolio.</li>
           <li><span className="proj-name">B2B Program Billing &amp; Funds Pool Architecture:</span> Designed a fare-program product offering model driven by program type and a new fixed-monthly-fee billing type, and authored the privacy impact assessment and change design consolidating funds-pool reload-refund logic so that a purse belongs to a single program.</li>
           <li><span className="proj-name">Concession &amp; Third-Party Benefit Program Integration:</span> Architected concession rules and invoicing for third-party benefit programs, including automated age-based concession approval/enrollment and attributed fare and invoicing for external benefit-program partners.</li>
           <li><span className="proj-name">B2B Account &amp; Fraud Controls:</span> Designed a set of B2B account-management and fraud-control enhancements — credit card velocity checks, token/identity status synchronization on member status changes, balance-transfer overrides on card replacement, and membership re-synchronization — alongside a broader B2B integration-gaps remediation effort.</li>

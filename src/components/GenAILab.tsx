@@ -31,8 +31,8 @@ export const GenAILab: React.FC = () => {
     {
       id: 'cloud-finops',
       title: 'GenAI Tool-Selection & Cloud FinOps Advisor',
-      prompt: 'Compare AWS Direct Connect vs Site-to-Site VPN for Azure-to-AWS ingestion.',
-      answer: 'CAPEX & OPEX comparison: Site-to-Site dual IPsec VPN requires $0 upfront port fees and ~$72/month per tunnel pair, saving 40% initial network overhead during modernization pilot while meeting the <500ms throughput SLA. Transition trigger to AWS Direct Connect established once ingress sustained data rate exceeds 1.2 Gbps.'
+      prompt: 'Compare AWS Direct Connect + MSK vs Managed VPN + Kinesis for Azure-to-AWS ingestion.',
+      answer: 'FinOps trade-off analysis: Managed Site-to-Site VPN and on-demand Kinesis ingestion cut recurring network and streaming-platform spend by roughly 70% versus Direct Connect/ExpressRoute with self-managed Kafka/MSK, while accelerating the platform move toward serverless AWS services with <500ms throughput SLA.'
     }
   ];
 
@@ -113,6 +113,24 @@ export const GenAILab: React.FC = () => {
                   <span className="tag-chip">Transformers</span>
                   <span className="tag-chip">LLM Tuning</span>
                   <span className="tag-chip">Deep Learning</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="glass-card ai-feature-card">
+              <div className="ai-feature-icon-box">
+                <Code size={22} />
+              </div>
+              <div className="ai-feature-content">
+                <h4 className="ai-feature-title">AI-Assisted SDLC Velocity</h4>
+                <p className="ai-feature-desc">
+                  Adopted modern AI engineering practices using GitHub Copilot and Claude/Claude Code for rapid code generation, automated test scaffolding, and technical documentation, shortening delivery cycles across Java/Spring Boot and Terraform squads.
+                </p>
+                <div className="ai-tech-pills">
+                  <span className="tag-chip">GitHub Copilot</span>
+                  <span className="tag-chip">Claude / Claude Code</span>
+                  <span className="tag-chip">AI-Assisted SDLC</span>
+                  <span className="tag-chip">Terraform IaC</span>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ import {
   ChevronRight,
   RefreshCw
 } from 'lucide-react';
-import { contactInfo } from '../data/portfolioData';
+import { searchKnowledgeBase } from '../utils/knowledgeBase';
 
 interface MessageAction {
   label: string;
@@ -91,7 +91,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({
     {
       id: 'welcome-1',
       sender: 'bot',
-      text: `👋 Hi! I'm Pavan's **AI Executive Assistant**. Ask me anything about Pavan's 20+ years in Enterprise & Data Architecture, FinOps savings, real-time streaming, or legacy mainframe modernization!`,
+      text: `👋 Hi! I'm Pavan's **AI Executive Assistant** powered by a semantic search engine grounded in Pavan's portfolio data.\n\nAsk me anything about Pavan's 20+ years in Enterprise & Data Architecture, FinOps savings, real-time streaming, or legacy mainframe modernization!`,
       actions: [
         { label: '⚡ Recruiter Fast Screen', action: 'open_recruiter_drawer' },
         { label: '🎬 60s Video Briefing', action: 'open_video_modal' }
@@ -111,65 +111,27 @@ export const Chatbot: React.FC<ChatbotProps> = ({
   }, [messages, isChatOpen]);
 
   const processUserQuery = (queryText: string) => {
-    const textLower = queryText.toLowerCase();
+    const { topChunk, matchScore } = searchKnowledgeBase(queryText);
 
-    let responseText = "";
-    let actions: MessageAction[] = [];
-
-    if (textLower.includes("finops") || textLower.includes("70%") || textLower.includes("saving") || textLower.includes("cost") || textLower.includes("vpn")) {
-      responseText = `**Azure-to-AWS ~70% FinOps Cost Savings:**\n\nPavan architected a cross-cloud ingestion blueprint connecting Azure Kafka & Oracle CDC into AWS via a Site-to-Site dual-tunnel VPN into Kinesis Data Streams.\n\n• **Impact:** Saved ~70% in recurring infrastructure & network spend vs. AWS Direct Connect / ExpressRoute and self-managed Kafka.\n• **SLA:** Maintained sub-second event propagation without rebuilding downstream alerting consumers.`;
-      actions = [
-        { label: '📐 View Cross-Cloud Architecture', action: 'scroll_to', target: 'architecture' },
-        { label: '📋 Recruiter Fast Screen', action: 'open_recruiter_drawer' }
-      ];
-    } else if (textLower.includes("flink") || textLower.includes("stream") || textLower.includes("observability") || textLower.includes("kafka") || textLower.includes("msk")) {
-      responseText = `**Apache Flink & Real-Time Streaming:**\n\nAt Cubic, Pavan designed an enterprise stream processing engine on Apache Flink & AWS MSK/Kinesis handling millions of edge device heartbeats.\n\n• **Sub-second SLA:** Reduced fault detection latency from 45 minutes to <1.2 seconds.\n• **Hot/Cold Partitioning:** Hot path drives real-time ServiceNow incident creation; Cold path feeds S3 Apache Iceberg lake.`;
-      actions = [
-        { label: '📊 View Flink Deep Dive', action: 'scroll_to', target: 'architecture' }
-      ];
-    } else if (textLower.includes("banking") || textLower.includes("mainframe") || textLower.includes("cognizant") || textLower.includes("jpmc") || textLower.includes("credit suisse") || textLower.includes("cobol")) {
-      responseText = `**15-Year Tier-1 Banking Modernization (Cognizant):**\n\nLed core banking modernizations for JPMorgan Chase & Credit Suisse.\n\n• **Strangler Fig Pattern:** Decoupled legacy Cobol/PL1/CICS mainframes into Spring Boot microservices with zero operational downtime.\n• **TDM 2.0:** Built a self-service test data generation portal, shrinking QA prep time from 3-4 days to under 2 minutes.`;
-      actions = [
-        { label: '🏛️ View Banking Modernization', action: 'scroll_to', target: 'architecture' },
-        { label: '📜 Career Ladder', action: 'scroll_to', target: 'experience' }
-      ];
-    } else if (textLower.includes("identity") || textLower.includes("security") || textLower.includes("saml") || textLower.includes("cognito") || textLower.includes("iam")) {
-      responseText = `**Two-Tier Identity & Multi-Tenant Security:**\n\nDesigned enterprise IAM architecture unifying staff governance (AWS IAM Identity Center / Managed AD) and partner federations (Cognito SAML 2.0 / OIDC).\n\n• **Lambda Authorizer:** Centralized JWT verification with token-derived tenant claims for row-level DB and S3 policy isolation (<15ms latency).`;
-      actions = [
-        { label: '🔒 View Identity Architecture', action: 'scroll_to', target: 'architecture' }
-      ];
-    } else if (textLower.includes("b2b") || textLower.includes("cubic") || textLower.includes("fare") || textLower.includes("billing") || textLower.includes("funds")) {
-      responseText = `**B2B Program Vertical Ownership at Cubic:**\n\nPavan served as Architect-of-Record for 20+ Jira Epics across the B2B employer-benefit vertical:\n\n• End-to-end program configuration, fixed monthly billing, and funds-pool reload/refund logic.\n• Integrated third-party FedEx API for B2B fulfillment.\n• Credit card velocity checks and card-status token synchronization.`;
-      actions = [
-        { label: '🏢 View Cubic Experience', action: 'scroll_to', target: 'experience' }
-      ];
-    } else if (textLower.includes("ai") || textLower.includes("genai") || textLower.includes("rag") || textLower.includes("iiit") || textLower.includes("copilot") || textLower.includes("claude")) {
-      responseText = `**Applied AI & Academic Rigor:**\n\n• **Academic Pedigree:** Pursuing MS in AI & ML at IIIT Bangalore & LJMU.\n• **Enterprise RAG:** Built RAG chatbots indexing 45+ Confluence specs & Swagger docs.\n• **Defect Prediction:** ML classifiers for automated root-cause analysis.\n• **AI SDLC:** Spearheaded GitHub Copilot & Claude/Claude Code adoption across Java/Terraform teams.`;
-      actions = [
-        { label: '🤖 Explore AI Lab', action: 'scroll_to', target: 'genai-lab' }
-      ];
-    } else if (textLower.includes("contact") || textLower.includes("email") || textLower.includes("phone") || textLower.includes("hire") || textLower.includes("notice") || textLower.includes("role") || textLower.includes("summary")) {
-      responseText = `**Pavan Kumar Ghanta | Target Leadership:**\n\n• **Target Roles:** Enterprise Architect, VP of Software Engineering, Director of Data Architecture.\n• **Experience:** 20+ Years Enterprise Architecture (IIT Dhanbad M.Tech, IIIT-B MS in AI/ML).\n• **Location:** Hyderabad, India (Open to Global / Remote / Relocation).\n• **Email:** ${contactInfo.email}\n• **Phone:** ${contactInfo.phone}\n• **LinkedIn:** [Pavan Kumar Ghanta](${contactInfo.linkedin})`;
-      actions = [
-        { label: '⚡ Recruiter Fast Screen', action: 'open_recruiter_drawer' },
-        { label: '🎬 60s Video Briefing', action: 'open_video_modal' }
-      ];
-    } else if (textLower.includes("education") || textLower.includes("iit") || textLower.includes("degree")) {
-      responseText = `**Academic Pedigree & Education:**\n\n1. **MS in AI & Machine Learning:** IIIT Bangalore & LJMU (In Progress)\n2. **M.Tech in Computer Science:** Indian Institute of Technology (IIT), Dhanbad (2006)\n3. **B.Tech in CS & IT:** Vignan's Engineering College, JNTU Hyderabad (Distinction, 2004)`;
-      actions = [
-        { label: '🎓 View Education & Credentials', action: 'scroll_to', target: 'education' }
-      ];
-    } else {
-      responseText = `Pavan is a **Software & Data Architect** with 20+ years leading cross-cloud lakehouses, real-time streaming (Flink/MSK), FinOps cost optimizations, and legacy modernizations.\n\nHere are key topics you can explore:`;
-      actions = [
+    // If query has low relevance match, return helpful overview with guidance
+    if (matchScore <= 2) {
+      const fallbackActions: MessageAction[] = [
         { label: '⚡ Recruiter Fast Screen', action: 'open_recruiter_drawer' },
         { label: '🎬 60s Video Briefing', action: 'open_video_modal' },
         { label: '📐 Cross-Cloud Architecture', action: 'scroll_to', target: 'architecture' },
         { label: '🤖 AI & RAG Engineering', action: 'scroll_to', target: 'genai-lab' }
       ];
+
+      return {
+        responseText: `Pavan Kumar Ghanta is a **Software & Data Architect** with 20+ years leading enterprise cloud data lakehouses, real-time streaming (Flink/MSK), FinOps cost optimizations, and core banking modernizations.\n\nHere are popular topics you can ask me about:`,
+        actions: fallbackActions
+      };
     }
 
-    return { responseText, actions };
+    return {
+      responseText: topChunk.content,
+      actions: topChunk.actionLabels || []
+    };
   };
 
   const handleSendMessage = (textToSend?: string) => {
@@ -199,7 +161,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({
       };
       setMessages(prev => [...prev, botMessage]);
       setIsTyping(false);
-    }, 600);
+    }, 450);
   };
 
   const handleActionClick = (actionItem: MessageAction) => {
@@ -233,7 +195,6 @@ export const Chatbot: React.FC<ChatbotProps> = ({
   };
 
   const formatMarkdownText = (text: string) => {
-    // Sanitize string first to prevent DOM XSS
     let formatted = sanitizeHtml(text);
     formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     formatted = formatted.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="chat-link">$1</a>');
@@ -273,7 +234,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({
               <div className="header-text-details">
                 <div className="bot-title">
                   <span>Pavan's AI Assistant</span>
-                  <span className="ai-badge">GPT-Grounded</span>
+                  <span className="ai-badge">Semantic RAG</span>
                 </div>
                 <div className="bot-subtitle">Executive Knowledge Base</div>
               </div>

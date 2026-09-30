@@ -12,11 +12,13 @@ import { RecruiterDrawer } from './components/RecruiterDrawer';
 import { VideoBriefingModal } from './components/VideoBriefingModal';
 import { PrintResumeView } from './components/PrintResumeView';
 import { Footer } from './components/Footer';
+import { Chatbot } from './components/Chatbot';
 
 export function App() {
   const [perspective, setPerspective] = useState<Perspective>('all');
   const [videoModalOpen, setVideoModalOpen] = useState<boolean>(false);
   const [recruiterDrawerOpen, setRecruiterDrawerOpen] = useState<boolean>(false);
+  const [chatbotOpen, setChatbotOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -31,6 +33,7 @@ export function App() {
           onSelectPerspective={setPerspective}
           onOpenVideoModal={() => setVideoModalOpen(true)}
           onOpenRecruiterDrawer={() => setRecruiterDrawerOpen(true)}
+          onOpenChatbot={() => setChatbotOpen(true)}
         />
 
         <main>
@@ -72,6 +75,15 @@ export function App() {
         <VideoBriefingModal
           isOpen={videoModalOpen}
           onClose={() => setVideoModalOpen(false)}
+        />
+
+        {/* Floating AI Executive Assistant Chatbot */}
+        <Chatbot
+          isOpen={chatbotOpen}
+          onToggle={() => setChatbotOpen(!chatbotOpen)}
+          onClose={() => setChatbotOpen(false)}
+          onOpenRecruiterDrawer={() => setRecruiterDrawerOpen(true)}
+          onOpenVideoModal={() => setVideoModalOpen(true)}
         />
       </div>
     </>

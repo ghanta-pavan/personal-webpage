@@ -8,7 +8,8 @@ import {
   Menu, 
   X,
   Printer,
-  Play
+  Play,
+  Bot
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -16,13 +17,15 @@ interface NavbarProps {
   onSelectPerspective: (perspective: Perspective) => void;
   onOpenVideoModal?: () => void;
   onOpenRecruiterDrawer: () => void;
+  onOpenChatbot?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   currentPerspective,
   onSelectPerspective,
   onOpenVideoModal,
-  onOpenRecruiterDrawer
+  onOpenRecruiterDrawer,
+  onOpenChatbot
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -92,6 +95,17 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Primary Navbar Actions */}
         <div className="navbar-actions">
+          {onOpenChatbot && (
+            <button
+              className="btn btn-outline-cyan btn-sm ask-ai-nav-btn"
+              onClick={onOpenChatbot}
+              title="Ask Pavan's AI Assistant questions directly"
+            >
+              <Bot size={14} />
+              <span>Ask AI</span>
+            </button>
+          )}
+
           <button 
             className="btn btn-primary btn-sm recruiter-cta-btn"
             onClick={onOpenRecruiterDrawer}
@@ -160,9 +174,18 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
 
           <div className="mobile-actions-panel">
-            {onOpenVideoModal && (
+            {onOpenChatbot && (
               <button 
                 className="btn btn-outline-cyan btn-sm btn-full"
+                onClick={() => { onOpenChatbot(); setMobileMenuOpen(false); }}
+              >
+                <Bot size={14} />
+                <span>Ask AI Assistant</span>
+              </button>
+            )}
+            {onOpenVideoModal && (
+              <button
+                className="btn btn-secondary btn-sm btn-full"
                 onClick={() => { onOpenVideoModal(); setMobileMenuOpen(false); }}
               >
                 <Play size={14} fill="currentColor" />
@@ -307,6 +330,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           display: flex;
           align-items: center;
           gap: 10px;
+        }
+
+        .ask-ai-nav-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
         }
 
         .btn-sm {

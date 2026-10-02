@@ -229,6 +229,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           gap: 12px;
           text-decoration: none;
           cursor: pointer;
+          flex-shrink: 0;
         }
 
         .brand-logo-mark {
@@ -244,11 +245,13 @@ export const Navbar: React.FC<NavbarProps> = ({
           font-size: 0.95rem;
           font-family: var(--font-mono);
           box-shadow: 0 0 15px var(--accent-cyan-glow);
+          flex-shrink: 0;
         }
 
         .brand-text {
           display: flex;
           flex-direction: column;
+          flex-shrink: 0;
         }
 
         .brand-name {
@@ -257,12 +260,14 @@ export const Navbar: React.FC<NavbarProps> = ({
           color: var(--text-primary);
           line-height: 1.2;
           letter-spacing: -0.01em;
+          white-space: nowrap;
         }
 
         .brand-role {
           font-size: 0.725rem;
           font-family: var(--font-mono);
           color: var(--accent-cyan-light);
+          white-space: nowrap;
         }
 
         .perspective-lens-wrapper {

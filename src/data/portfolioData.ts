@@ -616,8 +616,8 @@ export const educationList: EducationItem[] = [
     degree: "B.Tech in Computer Science and Information Technology",
     institution: "Vignan's Engineering College, JNTU Hyderabad",
     year: "2004",
-    status: "First Class with Distinction",
-    honors: "Graduated with Distinction in Core Computer Science and Software Engineering"
+    status: "First Class",
+    honors: "Core Computer Science and Software Engineering"
   }
 ];
 

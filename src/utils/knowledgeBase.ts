@@ -127,7 +127,7 @@ export const KNOWLEDGE_CORPUS: KnowledgeChunk[] = [
     content: `**Academic Pedigree & Higher Education:**\n\n` +
       `1. **MS in Machine Learning & AI:** IIIT Bangalore & Liverpool John Moores University (In Progress) — Specializing in Transformers, LLMs, and RAG.\n` +
       `2. **M.Tech in Computer Science:** Indian Institute of Technology (IIT), Dhanbad (2006) — Advanced Algorithms & Distributed Systems.\n` +
-      `3. **B.Tech in CS & IT:** Vignan's Engineering College, JNTU Hyderabad (2004) — First Class with Distinction.`,
+      `3. **B.Tech in CS & IT:** Vignan's Engineering College, JNTU Hyderabad (2004) — First Class.`,
     actionLabels: [
       { label: '🎓 View Education Section', action: 'scroll_to', target: 'education' }
     ]

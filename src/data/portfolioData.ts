@@ -12,9 +12,9 @@ import {
 
 export const contactInfo: ContactInfo = {
   name: "Pavan Kumar Ghanta",
-  headline: "Software & Data Architect | Engineering Leader",
-  targetRole: "Targeting Enterprise Architect & Director of Engineering Roles",
-  tagline: "Results-driven Software & Data Architect and Engineering Leader with 20+ years spanning application, data, security, and mainframe architecture — building toward an Enterprise Architect & Director of Engineering role.",
+  headline: "Data & Software Architect | Engineering Leader",
+  targetRole: "Targeting Enterprise Architecture and Director Engineering Roles",
+  tagline: "Results-driven Data & Software Architect and Engineering Leader with 20+ years spanning application, data, security, and mainframe architecture — building toward Enterprise Architecture and Director Engineering roles.",
   location: "Hyderabad, India (Open to Global / Remote)",
   phone: "+91-9163012196",
   email: "pavankumar.ghanta@zohomail.in",
@@ -119,7 +119,7 @@ export const careerStages: CareerStage[] = [
   {
     id: "ea",
     stepNumber: 8,
-    title: "Enterprise Architect / Director of Engineering",
+    title: "Enterprise Architecture and Director Engineering",
     company: "Target Leadership Destination",
     period: "2 Months Notice Period",
     level: "Executive Horizon",
@@ -659,7 +659,7 @@ export const videoBriefingChapters: VideoChapter[] = [
     startTime: 50,
     timestampDisplay: "0:50",
     title: "Enterprise Architecture Philosophy & Target Executive Impact",
-    description: "What Pavan delivers in Enterprise Architect or Director of Engineering roles.",
+    description: "What Pavan delivers in Enterprise Architecture and Director Engineering roles.",
     keyTakeaways: [
       "Architect-of-record for 20+ B2B epics with deep Transit Fare & Payment domain expertise",
       "Early adopter of AI-assisted SDLC practices (GitHub Copilot, Claude/Claude Code)",

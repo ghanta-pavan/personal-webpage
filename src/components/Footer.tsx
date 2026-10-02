@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
             <p className="footer-tagline-text">{contactInfo.tagline}</p>
             <div className="footer-status-pill">
               <span className="dot"></span>
-              <span>Available for Enterprise Architecture &amp; Director of Engineering</span>
+              <span>Available for Enterprise Architecture and Director Engineering</span>
             </div>
           </div>
 

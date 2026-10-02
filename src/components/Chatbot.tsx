@@ -123,7 +123,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({
       ];
 
       return {
-        responseText: `Pavan Kumar Ghanta is a **Software & Data Architect** with 20+ years leading enterprise cloud data lakehouses, real-time streaming (Flink/MSK), FinOps cost optimizations, and core banking modernizations.\n\nHere are popular topics you can ask me about:`,
+        responseText: `Pavan Kumar Ghanta is a **Data & Software Architect** with 20+ years leading enterprise cloud data lakehouses, real-time streaming (Flink/MSK), FinOps cost optimizations, and core banking modernizations.\n\nHere are popular topics you can ask me about:`,
         actions: fallbackActions
       };
     }

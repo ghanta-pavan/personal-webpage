@@ -117,7 +117,7 @@ export const CareerLadder: React.FC = () => {
                   ? "Formative 15-year tenure at Cognizant building enterprise reliability for JPMC & Credit Suisse." 
                   : currentStage.stepNumber < 8 
                     ? "Strategic high-scale transit architecture, AWS data lakehouse engineering, and cross-cloud CDC modernization at Cubic." 
-                    : "Ready to drive enterprise-wide portfolio alignment, cloud migration economics, and engineering excellence as Enterprise Architect / VP."
+                    : "Ready to drive enterprise-wide portfolio alignment, cloud migration economics, and engineering excellence in Enterprise Architecture and Director Engineering roles."
                 }
               </div>
             </div>

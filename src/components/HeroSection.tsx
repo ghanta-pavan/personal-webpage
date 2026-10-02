@@ -72,7 +72,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <div className="portrait-gradient-overlay" />
                 <div className="status-indicator-pill">
                   <span className="status-dot"></span>
-                  <span className="status-text">Open to Enterprise Architect / VP Roles</span>
+                  <span className="status-text">Open to Enterprise Architecture and Director Engineering Roles</span>
                 </div>
               </div>
 

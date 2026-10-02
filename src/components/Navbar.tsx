@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
           <div className="brand-text">
             <span className="brand-name">Pavan Kumar Ghanta</span>
-            <span className="brand-role">Software &amp; Data Architect</span>
+            <span className="brand-role">Data &amp; Software Architect</span>
           </div>
         </a>
 

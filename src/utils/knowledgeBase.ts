@@ -16,8 +16,8 @@ export const KNOWLEDGE_CORPUS: KnowledgeChunk[] = [
     category: 'summary',
     title: 'Executive Profile & Target Roles',
     keywords: ['summary', 'profile', 'pavan', 'ghanta', 'target', 'role', 'vp', 'executive', 'architect', 'enterprise', 'experience', 'background', 'overview', 'who', 'leadership', 'style', 'influence'],
-    content: `**Pavan Kumar Ghanta | Software & Data Architect & Engineering Leader**\n\n` +
-      `• **Target Roles:** Enterprise Architect & Director of Engineering.\n` +
+    content: `**Pavan Kumar Ghanta | Data & Software Architect & Engineering Leader**\n\n` +
+      `• **Target Roles:** Enterprise Architecture and Director Engineering.\n` +
       `• **Leadership Style:** Influence Without Authority — aligning cross-functional architecture, product, DBA, and SRE teams through RACI frameworks, design reviews, and collaborative technical governance.\n` +
       `• **Pedigree:** 20+ years of architecture leadership spanning application, cloud data lakehouses, identity/security, and core banking mainframe modernizations. M.Tech from IIT Dhanbad (2006) and MS in AI/ML from IIIT Bangalore.\n` +
       `• **Recent Key Highlights:** Architect-of-Record for 20+ B2B epics at Cubic Transportation Systems; designed Azure-to-AWS cross-cloud VPN ingestion cutting spend by ~70%; Flink real-time device observability; 750+ line database migration runbooks with 8-role RACI governance.`,
@@ -142,7 +142,7 @@ export const KNOWLEDGE_CORPUS: KnowledgeChunk[] = [
       `• **Phone:** ${contactInfo.phone}\n` +
       `• **LinkedIn:** [LinkedIn Profile](${contactInfo.linkedin})\n` +
       `• **Current Location:** Hyderabad, India\n` +
-      `• **Availability:** Immediate Availability for Global, Remote, or Relocation opportunities in Enterprise Architecture & Executive Engineering Leadership.`,
+      `• **Availability:** Immediate Availability for Global, Remote, or Relocation opportunities in Enterprise Architecture and Director Engineering roles.`,
     actionLabels: [
       { label: '⚡ Recruiter Fast Screen', action: 'open_recruiter_drawer' },
       { label: '🎬 Watch 60s Video Briefing', action: 'open_video_modal' }

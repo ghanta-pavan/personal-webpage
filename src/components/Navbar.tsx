@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { Perspective } from '../types/portfolio';
 import { 
   FileText, 
-  Layers, 
-  ShieldCheck, 
-  Sparkles, 
   Menu, 
   X,
   Printer,
@@ -13,16 +10,14 @@ import {
 } from 'lucide-react';
 
 interface NavbarProps {
-  currentPerspective: Perspective;
-  onSelectPerspective: (perspective: Perspective) => void;
+  currentPerspective?: Perspective;
+  onSelectPerspective?: (perspective: Perspective) => void;
   onOpenVideoModal?: () => void;
   onOpenRecruiterDrawer: () => void;
   onOpenChatbot?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  currentPerspective,
-  onSelectPerspective,
   onOpenVideoModal,
   onOpenRecruiterDrawer,
   onOpenChatbot
@@ -49,42 +44,13 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
           <div className="brand-text">
             <span className="brand-name">Pavan Kumar Ghanta</span>
-            <span className="brand-role">Enterprise &amp; Data Architect</span>
+            <span className="brand-role">Software &amp; Data Architect</span>
           </div>
         </a>
 
-        {/* Desktop Perspective Lens Switcher */}
-        <div className="perspective-lens-wrapper">
-          <div className="perspective-lens" role="group" aria-label="Perspective selector">
-            <button
-              className={`lens-btn ${currentPerspective === 'all' ? 'active' : ''}`}
-              onClick={() => onSelectPerspective('all')}
-              title="Show balanced comprehensive architecture and leadership view"
-            >
-              <Sparkles size={13} />
-              <span>Overview</span>
-            </button>
-            <button
-              className={`lens-btn ${currentPerspective === 'architecture' ? 'active' : ''}`}
-              onClick={() => onSelectPerspective('architecture')}
-              title="Filter for system topologies, cross-cloud pipelines, Flink, and data lakes"
-            >
-              <Layers size={13} />
-              <span>Architecture</span>
-            </button>
-            <button
-              className={`lens-btn ${currentPerspective === 'leadership' ? 'active' : ''}`}
-              onClick={() => onSelectPerspective('leadership')}
-              title="Filter for governance runbooks, RACI, FinOps, and team leadership"
-            >
-              <ShieldCheck size={13} />
-              <span>Leadership &amp; RACI</span>
-            </button>
-          </div>
-        </div>
-
         {/* Desktop Section Links */}
         <nav className="navbar-nav desktop-nav">
+          <a href="#top" onClick={handleScrollToTop}>Overview</a>
           <a href="#career-ladder">Career Ladder</a>
           <a href="#architecture">Architecture</a>
           <a href="#experience">Experience</a>
@@ -137,34 +103,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="mobile-dropdown-menu">
-          <div className="mobile-lens-group">
-            <span className="mobile-lens-label">Perspective Lens:</span>
-            <div className="mobile-lens-buttons">
-              <button
-                className={`mobile-lens-btn ${currentPerspective === 'all' ? 'active' : ''}`}
-                onClick={() => { onSelectPerspective('all'); setMobileMenuOpen(false); }}
-              >
-                <Sparkles size={13} />
-                <span>Overview</span>
-              </button>
-              <button
-                className={`mobile-lens-btn ${currentPerspective === 'architecture' ? 'active' : ''}`}
-                onClick={() => { onSelectPerspective('architecture'); setMobileMenuOpen(false); }}
-              >
-                <Layers size={13} />
-                <span>Architecture</span>
-              </button>
-              <button
-                className={`mobile-lens-btn ${currentPerspective === 'leadership' ? 'active' : ''}`}
-                onClick={() => { onSelectPerspective('leadership'); setMobileMenuOpen(false); }}
-              >
-                <ShieldCheck size={13} />
-                <span>Leadership</span>
-              </button>
-            </div>
-          </div>
-
           <nav className="mobile-nav-links">
+            <a href="#top" onClick={handleScrollToTop}>Overview</a>
             <a href="#career-ladder" onClick={() => setMobileMenuOpen(false)}>Career Ladder</a>
             <a href="#architecture" onClick={() => setMobileMenuOpen(false)}>Architecture Deep Dives</a>
             <a href="#experience" onClick={() => setMobileMenuOpen(false)}>Experience &amp; Projects</a>

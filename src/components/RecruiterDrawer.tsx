@@ -9,7 +9,6 @@ import {
   Award, 
   Briefcase, 
   Clock, 
-  ShieldCheck,
   FileText
 } from 'lucide-react';
 import { LinkedInIcon } from './LinkedInIcon';
@@ -70,15 +69,15 @@ export const RecruiterDrawer: React.FC<RecruiterDrawerProps> = ({ isOpen, onClos
               <div>
                 <h5 className="candidate-name-text">{contactInfo.name}</h5>
                 <p className="candidate-target-text">{contactInfo.targetRole}</p>
-                <span className="candidate-status-tag">Open for Immediate Strategic Alignment</span>
+                <span className="candidate-status-tag">Notice Period: 2 Months</span>
               </div>
             </div>
 
             <div className="quick-stats-grid">
               <div className="quick-stat-box">
                 <Clock size={14} className="stat-icon" />
-                <span className="stat-val">20+ Years</span>
-                <span className="stat-label">Total Exp</span>
+                <span className="stat-val">2 Months</span>
+                <span className="stat-label">Notice Period</span>
               </div>
               <div className="quick-stat-box">
                 <Award size={14} className="stat-icon" />

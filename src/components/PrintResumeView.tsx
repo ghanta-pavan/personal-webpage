@@ -220,20 +220,21 @@ export const PrintResumeView: React.FC = () => {
         <div className="left">
           <h1>PAVAN KUMAR GHANTA</h1>
           <div className="tagline">
-            Results-driven <b>Software &amp; Data Architect and Engineering Leader</b> with 20+ years spanning application, data, security, and mainframe architecture — building toward an <b>Enterprise Architect</b> role. Committed to aligning technology strategy with business goals through cross-domain architecture, governance, and scalable, secure platform design.
+            Results-driven <b>Software &amp; Data Architect and Engineering Leader</b> with 20+ years spanning application, data, security, and mainframe architecture — building toward an <b>Enterprise Architect &amp; Director of Engineering</b> role. Committed to aligning technology strategy with business goals through cross-domain architecture, governance, and scalable, secure platform design.
           </div>
         </div>
         <div className="contact">
           &#9742; +91-9163012196<br />
           &#9993; pavankumar.ghanta@zohomail.in<br />
-          in/ linkedin.com/in/pavan-kumar-ghantaa1b14475/
+          in/ linkedin.com/in/pavan-kumar-ghantaa1b14475/<br />
+          Notice Period: 2 Months
         </div>
       </div>
 
       {/* Profile Summary */}
       <div className="section-title">Profile Summary</div>
       <ul>
-        <li>Software &amp; Data Architect and Engineering Leader with over 20 years of experience spanning application architecture, data architecture, identity/security architecture, and mainframe modernization — actively building toward an Enterprise Architect role through cross-portfolio, business-aligned technology leadership.</li>
+        <li>Software &amp; Data Architect and Engineering Leader with over 20 years of experience spanning application architecture, data architecture, identity/security architecture, and mainframe modernization — actively building toward an Enterprise Architect &amp; Director of Engineering role through cross-portfolio, business-aligned technology leadership.</li>
         <li>Proven ability to architect across the full enterprise stack: cross-cloud and cloud-native data platforms (AWS DMS, Oracle GoldenGate, MSK/Kafka, Kinesis, Azure-to-AWS VPN ingestion), application development (Java, Spring Boot, Angular), identity &amp; security (IAM Identity Center, Cognito), and legacy-to-cloud modernization — the cross-domain breadth central to enterprise architecture.</li>
         <li>Experienced translating business requirements into technology strategy, including cost governance, tool-selection frameworks, and phased delivery roadmaps presented to Chief Architect and executive stakeholders; owns epic-level planning, estimation, and design-approval gates in Jira/Confluence for multi-team data platform programs.</li>
         <li>Demonstrated success in end-to-end project management, leading all phases from requirement analysis, effort estimation, and design to deployment and production support under Agile and DevOps frameworks, including test-plan authorship, security/tagging policy definition, and data lifecycle (hot/warm/cold) governance.</li>
@@ -259,7 +260,7 @@ export const PrintResumeView: React.FC = () => {
           </div>
           <div className="section-title" style={{ marginTop: '12px' }}>Soft Skills</div>
           <ul className="softskills">
-            <li>Team Leader</li>
+            <li>Influence Without Authority</li>
             <li>Communicator &amp; Collaborator</li>
             <li>Planner &amp; Innovator</li>
             <li>Decision-maker</li>

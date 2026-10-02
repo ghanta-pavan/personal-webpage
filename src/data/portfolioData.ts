@@ -13,8 +13,8 @@ import {
 export const contactInfo: ContactInfo = {
   name: "Pavan Kumar Ghanta",
   headline: "Software & Data Architect | Engineering Leader",
-  targetRole: "Targeting Enterprise Architect & VP of Software Engineering Roles",
-  tagline: "Results-driven Software & Data Architect and Engineering Leader with 20+ years spanning application, data, security, and mainframe architecture — building toward an Enterprise Architect role.",
+  targetRole: "Targeting Enterprise Architect & Director of Engineering Roles",
+  tagline: "Results-driven Software & Data Architect and Engineering Leader with 20+ years spanning application, data, security, and mainframe architecture — building toward an Enterprise Architect & Director of Engineering role.",
   location: "Hyderabad, India (Open to Global / Remote)",
   phone: "+91-9163012196",
   email: "pavankumar.ghanta@zohomail.in",
@@ -119,9 +119,9 @@ export const careerStages: CareerStage[] = [
   {
     id: "ea",
     stepNumber: 8,
-    title: "Enterprise Architect / VP Engineering",
+    title: "Enterprise Architect / Director of Engineering",
     company: "Target Leadership Destination",
-    period: "Immediate Availability",
+    period: "2 Months Notice Period",
     level: "Executive Horizon",
     isTarget: true,
     description: "Aligning cross-domain technology portfolios, cloud migration economics, data lakehouses, and high-performance engineering organizations with strategic business imperatives."
@@ -575,12 +575,13 @@ export const competencies: CompetencyCategory[] = [
     domain: "Applied AI & Engineering Leadership",
     iconName: "BrainCircuit",
     skills: [
+      "Leadership Style: Influence Without Authority",
       "AI-Assisted SDLC (GitHub Copilot, Claude/Claude Code)",
       "Generative AI & RAG Chatbots (Confluence/Swagger docs)",
       "AI-Based Defect Root Cause Prediction",
       "Technical Governance & 8-Role RACI Runbooks",
       "45+ Confluence-Tracked Architecture Change Approvals",
-      "Team Mentorship (10+ Member Distributed Squads)"
+      "Team Mentorship & Cross-Functional Alignment"
     ]
   },
   {
@@ -658,7 +659,7 @@ export const videoBriefingChapters: VideoChapter[] = [
     startTime: 50,
     timestampDisplay: "0:50",
     title: "Enterprise Architecture Philosophy & Target Executive Impact",
-    description: "What Pavan delivers in Enterprise Architect, Director, or VP of Software Engineering roles.",
+    description: "What Pavan delivers in Enterprise Architect or Director of Engineering roles.",
     keyTakeaways: [
       "Architect-of-record for 20+ B2B epics with deep Transit Fare & Payment domain expertise",
       "Early adopter of AI-assisted SDLC practices (GitHub Copilot, Claude/Claude Code)",

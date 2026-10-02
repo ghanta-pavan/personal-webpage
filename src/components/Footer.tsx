@@ -4,9 +4,7 @@ import {
   Mail, 
   Phone, 
   Printer, 
-  ArrowUp, 
-  ShieldCheck, 
-  Heart 
+  ArrowUp
 } from 'lucide-react';
 import { LinkedInIcon } from './LinkedInIcon';
 
@@ -27,7 +25,7 @@ export const Footer: React.FC = () => {
             <p className="footer-tagline-text">{contactInfo.tagline}</p>
             <div className="footer-status-pill">
               <span className="dot"></span>
-              <span>Available for Executive Architecture &amp; VP Leadership</span>
+              <span>Available for Enterprise Architecture &amp; Director of Engineering</span>
             </div>
           </div>
 

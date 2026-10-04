@@ -78,8 +78,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <div className="portrait-meta">
                 <h3 className="candidate-name">{contactInfo.name}</h3>
-                <p className="candidate-current-role">Data &amp; Software Architect</p>
+                <p className="candidate-current-role">Data &amp; Software Architect | Enterprise Technology Leader</p>
                 <div className="candidate-tenure">Cubic Transportation Systems &bull; 20+ Yrs Total</div>
+                <div className="candidate-notice-pill">
+                  <Clock size={12} />
+                  <span>Notice Period: 2 Months</span>
+                </div>
 
                 <div className="contact-links-grid">
                   <a href={`tel:${contactInfo.phone}`} className="contact-item" title="Call directly">

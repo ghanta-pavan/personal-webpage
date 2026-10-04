@@ -7,161 +7,231 @@ import {
   ExperienceRole,
   CompetencyCategory,
   EducationItem,
-  VideoChapter
+  VideoChapter,
+  RoleDetail,
+  LeadershipPrinciple
 } from '../types/portfolio';
 
 export const contactInfo: ContactInfo = {
   name: "Pavan Kumar Ghanta",
-  headline: "Data & Software Architect | Engineering Leader",
+  headline: "Data & Software Architect | Enterprise Technology & Engineering Leader",
   targetRole: "Targeting Enterprise Architecture and Director Engineering Roles",
-  tagline: "Results-driven Data & Software Architect and Engineering Leader with 20+ years spanning application, data, security, and mainframe architecture — building toward Enterprise Architecture and Director Engineering roles.",
-  location: "Hyderabad, India (Open to Global / Remote)",
+  tagline: "Results-driven Software & Data Architect and Engineering Leader with 20+ years of enterprise experience spanning distributed cloud platforms, lakehouse architectures, real-time event streaming, security/IAM governance, and legacy-to-cloud modernization. Actively building toward an Enterprise Architect role by aligning technology roadmaps with corporate business strategy.",
+  location: "Hyderabad, India",
   phone: "+91-9163012196",
   email: "pavankumar.ghanta@zohomail.in",
   linkedin: "https://linkedin.com/in/pavan-kumar-ghantaa1b14475/",
   photoUrl: "./pavan-photo.jpg",
   resumePdfUrl: "./resume.html",
   executiveSummary: [
-    "Strategic and hands-on architectural leader with over 20 years of experience spanning application architecture, modern cloud data lakehouses, identity/security architecture, and mission-critical legacy modernization.",
-    "Proven track record spearheading enterprise data platform strategy at Cubic Transportation Systems (AWS lakehouse, cross-cloud Azure VPN ingestion, Flink real-time observability, Kafka/MSK event streaming) and 15 years at Cognizant executing complex core banking modernizations for Tier-1 institutions (JPMorgan Chase, Credit Suisse).",
-    "Owns end-to-end architecture for the B2B/employer-benefit program vertical of the platform — from program configuration and funds-pool/billing logic through fraud controls, notifications, and partner integrations — combining deep domain expertise in transit fare & payments, B2B program administration, and identity/data-privacy compliance.",
-    "Early adopter of AI-assisted SDLC practices (GitHub Copilot, Claude/Claude Code) alongside Generative AI (RAG) models, cutting development and documentation cycles across Java/Spring Boot and Terraform workstreams."
+    "Results-driven Software & Data Architect and Engineering Leader with 20+ years of enterprise experience spanning distributed cloud platforms, lakehouse architectures, real-time event streaming, security/IAM governance, and legacy-to-cloud modernization. Actively building toward an Enterprise Architect role by aligning technology roadmaps with corporate business strategy.",
+    "Recognized for leading through influence without authority—unifying autonomous engineering pods, DBAs, DevOps, and C-suite leadership (Chief Architect, VP of Engineering). Bridges strategic vision with deterministic engineering execution via Spec-Driven Development (SDD), FinOps cost modeling, and Architecture Decision Records (ADRs).",
+    "Enterprise Lakehouse & Streaming Platforms: Proven authority in architecting enterprise lakehouses on AWS (S3, Glue, Spark, Athena) and low-latency streaming backbones using Apache Kafka, AWS MSK, Apache Flink, and AWS Kinesis Data Streams & Firehose.",
+    "Database Migration & CDC Mastery: Architected zero/near-zero downtime database cutovers utilizing AWS DMS and Oracle GoldenGate (OGG), capturing real-time CDC streams from Oracle DB, DB2, and SQL Server into PostgreSQL (RDS/Aurora) and S3 lakehouses.",
+    "Governance, FinOps & Observability: Slashing recurring infrastructure expenses by ~70% via cross-cloud VPN and Kinesis pipelines; proficient with Terraform IaC, Amazon CloudWatch, and Grafana observability dashboards.",
+    "AI Adoption & Modern SDLC: Hands-on implementation of Generative AI (RAG, LLM integrations) for automated defect classification and Confluence-based knowledge retrieval; early adopter of AI-assisted engineering with GitHub Copilot and Claude Code."
   ]
 };
 
+export const leadershipPrinciples: LeadershipPrinciple[] = [
+  {
+    id: "influence-without-authority",
+    title: "Influence Without Authority & Cross-Functional Alignment",
+    description: "Unifies distributed engineering teams, platform infrastructure pods, DBAs, and business stakeholders around common architectural North Stars through objective trade-off frameworks, Architecture Review Boards (ARBs), and collaborative RFCs.",
+    iconName: "Users",
+    keyPractices: [
+      "Architecture Review Boards (ARBs) & Consensus Building",
+      "Collaborative RFC Documentation & Review Cadences",
+      "Objective Alternatives-Considered Trade-Off Frameworks",
+      "Unifying Autonomous Pods, DBAs, DevOps & C-Suite"
+    ],
+    proofPoint: "Standardized 750+ line production migration runbook (RACI across 8 distinct roles) and reusable Terraform modules adopted across multi-disciplinary platform squads."
+  },
+  {
+    id: "strategic-finops",
+    title: "Strategic FinOps & Executive Advisory",
+    description: "Champions frugality and capital efficiency; constructs data-driven TCO and build-vs-buy models that de-risk cloud investments and guide Chief Architect and executive funding allocations.",
+    iconName: "TrendingUp",
+    keyPractices: [
+      "Data-Driven Total Cost of Ownership (TCO) Modeling",
+      "Build-vs-Buy Architecture Trade-Off Rubrics",
+      "Executive Investment De-risking & Budget Allocations",
+      "Cloud Infrastructure & Operational Cost Optimization"
+    ],
+    proofPoint: "Demonstrated that managed Site-to-Site VPN and on-demand Kinesis ingestion slashed recurring network and streaming OPEX by ~70% versus dedicated Direct Connect/MSK."
+  },
+  {
+    id: "spec-driven-engineering",
+    title: "Spec-Driven Engineering & Delivery Governance",
+    description: "Spearheads Spec-Driven Development (SDD), establishing deterministic design-approval gates, Jira/Confluence epic tracking, and clear role boundaries between Architecture and Engineering Management.",
+    iconName: "FileCheck",
+    keyPractices: [
+      "Spec-Driven Development (SDD) Methodology",
+      "Systems Engineering Operating Model (RACI, KPIs)",
+      "Deterministic Architecture Design-Approval Gates",
+      "Clear Role Boundaries: Architecture vs. Engineering Management"
+    ],
+    proofPoint: "Authored and presented an 11-slide Systems Engineering Operating Model to executive leadership, transitioning multi-sprint squads to Spec-Driven Development."
+  },
+  {
+    id: "customer-obsession",
+    title: "Customer Obsession & Business Alignment",
+    description: "Translates business domain requirements into resilient technical architectures, owning end-to-end portfolio verticals across transit fare billing, concession logic, and B2B funds-pool management.",
+    iconName: "Target",
+    keyPractices: [
+      "Domain-Driven Design (DDD) & Strategic Mapping",
+      "End-to-End Vertical Portfolio Ownership",
+      "Complex Funds-Pooling & Program Billing Models",
+      "Automated Partner Integrations & SLA Enforcement"
+    ],
+    proofPoint: "Served as chief architect-of-record for enterprise B2B employer-benefit portfolio across 20+ Jira epics and 45+ Confluence-tracked architectural change designs."
+  },
+  {
+    id: "talent-mentorship",
+    title: "Talent Mentorship & Culture of Quality",
+    description: "Practices servant leadership; mentors 10+ member multi-disciplinary teams across technical design, secure coding (SonarQube, Fortify), and AI-assisted SDLC workflows (GitHub Copilot, Claude/Claude Code).",
+    iconName: "Award",
+    keyPractices: [
+      "Servant Leadership & Engineering Career Coaching",
+      "AI-Assisted SDLC Workflows (Copilot, Claude Code)",
+      "Automated Static Code Gates (SonarQube, Fortify SCA)",
+      "Test-Driven Development (TDD) & Secure Code Standards"
+    ],
+    proofPoint: "Mentored 10-member cross-functional engineering teams, eliminating architectural technical debt and reducing post-release defect density across global onsite/offshore pods."
+  }
+];
+
 export const domainExpertise: string[] = [
-  "Transit Fare & Payments Systems",
-  "B2B / Employer Benefit Program Administration",
-  "Funds Pool & Program Billing",
-  "Fraud & Risk Management",
-  "Identity & Data Privacy (GDPR/DPIA)",
-  "Concession & Eligibility Programs",
-  "Banking & Financial Services",
-  "Cloud Cost & Modernization Strategy"
+  "Transit Fare Collection & Payments",
+  "B2B Employer Benefit Administration",
+  "Funds-Pool Management",
+  "Fraud & Velocity Risk Detection",
+  "Banking & Money Market Trading"
+];
+
+export const architectureDomains: string[] = [
+  "Solution Architecture",
+  "Enterprise Data Lakehouse",
+  "Event-Driven Architecture",
+  "Microservices",
+  "Multi-Tenant Isolation",
+  "Cross-Cloud Network Topologies"
 ];
 
 export const credentialBadges: CredentialBadge[] = [
   { label: "20+ Years Enterprise Exp", iconName: "Clock", category: "experience", highlight: true },
+  { label: "Notice Period: 2 Months", iconName: "Clock", category: "availability", highlight: true },
+  { label: "Influence Without Authority", iconName: "ShieldCheck", category: "leadership", highlight: true },
   { label: "M.Tech IIT Dhanbad (2006)", iconName: "GraduationCap", category: "pedigree", highlight: true },
   { label: "MS in AI/ML (IIIT-B & LJMU)", iconName: "Cpu", category: "pedigree", highlight: true },
   { label: "AWS & Azure Cross-Cloud", iconName: "Cloud", category: "tech" },
-  { label: "Apache Flink & Kafka/MSK", iconName: "Activity", category: "tech" },
+  { label: "Apache Spark & Flink", iconName: "Activity", category: "tech", highlight: true },
   { label: "AWS DMS & GoldenGate CDC", iconName: "Database", category: "tech" },
-  { label: "Mainframe Modernization", iconName: "Server", category: "tech" },
-  { label: "Cloud FinOps (~70% Spend Cut)", iconName: "ShieldCheck", category: "leadership", highlight: true }
+  { label: "Strategic FinOps (~70% OPEX Cut)", iconName: "TrendingUp", category: "leadership", highlight: true }
 ];
 
 export const careerStages: CareerStage[] = [
   {
     id: "pat",
     stepNumber: 1,
-    title: "Programmer Analyst Trainee",
+    title: "Programmer Analyst / Trainee",
     company: "Cognizant Technology Solutions",
-    period: "Jun 2006 – 2007",
+    period: "Jun 2006 – Sep 2009",
     level: "Foundation",
-    description: "Core algorithmic engineering, Java/J2EE and relational database programming following IIT Dhanbad M.Tech graduation."
-  },
-  {
-    id: "pa",
-    stepNumber: 2,
-    title: "Programmer Analyst",
-    company: "Cognizant Technology Solutions",
-    period: "2007 – 2009",
-    level: "Full Stack Delivery",
-    description: "Engineered distributed banking services, SQL Server/DB2 data reconciliation batch engines, and institutional client workflows."
+    description: "Core algorithmic engineering, COBOL, JCL, CICS, VSAM, and DB2 database systems for global banking clients."
   },
   {
     id: "assoc",
-    stepNumber: 3,
+    stepNumber: 2,
     title: "Associate",
     company: "Cognizant Technology Solutions",
-    period: "2009 – 2012",
+    period: "Oct 2009 – Jun 2015",
     level: "Technical Leadership",
-    description: "Led technical delivery for money market and credit systems at JPMC and Credit Suisse, establishing automated build workflows."
+    description: "Spearheaded mainframe-to-UNIX data integration (XAMIN), core banking credit enhancements at Credit Suisse, and CORBA middleware microservices."
   },
   {
     id: "sr-assoc",
-    stepNumber: 4,
-    title: "Senior Associate & Solution Architect",
+    stepNumber: 3,
+    title: "Senior Associate / Architect",
     company: "Cognizant Technology Solutions",
-    period: "2012 – Oct 2021",
+    period: "Jul 2015 – Oct 2021",
     level: "Architectural Ownership",
-    description: "Spearheaded 15-year tenure programs across JPMC and Credit Suisse: Strangler Fig mainframe refactoring, TDM 2.0 self-service test data generation, and DevSecOps governance."
+    description: "Led solution architecture for JPMC money market trading (MMSY), Credit Suisse banking modernization, TDM 2.0 test automation, and DevSecOps governance across 15-year tenure."
   },
   {
     id: "pse",
-    stepNumber: 5,
+    stepNumber: 4,
     title: "Principal Software Engineer",
     company: "Cubic Transportation Systems",
     period: "Nov 2021 – Jul 2023",
     level: "Enterprise Scale",
-    description: "Delivered enterprise transit software architecture, B2B funds-pool billing logic, and third-party concession/benefit integrations."
+    description: "High-throughput transit transaction microservices, concession eligibility verification, and technical mentorship of a 10-member cross-functional engineering team."
   },
   {
     id: "sa",
-    stepNumber: 6,
+    stepNumber: 5,
     title: "Software Architect",
     company: "Cubic Transportation Systems",
     period: "Aug 2023 – Nov 2025",
     level: "Strategic Architecture",
-    description: "Authored 45+ Confluence-tracked change designs, B2B fraud velocity controls, MFA security architecture, and enterprise GenAI (RAG) automation prototypes."
+    description: "Chief architect for B2B employer-benefit vertical (20+ epics), 11-slide Systems Engineering Operating Model, 45+ Confluence designs, and AI-assisted SDLC pioneering."
   },
   {
     id: "da",
-    stepNumber: 7,
+    stepNumber: 6,
     title: "Data Architect",
     company: "Cubic Transportation Systems",
     period: "Nov 2025 – Present",
     level: "Executive Data Platform",
     isCurrent: true,
-    description: "Leading enterprise data platform architecture: cross-cloud Azure-to-AWS ingestion, Flink device observability, MSK streaming, 750+ line DMS/GoldenGate migration runbooks, and S3 lifecycle governance."
+    description: "Strategic FinOps executive advisory (~70% OPEX cut), 750+ line migration runbook with 8-role RACI, central S3 Lakehouse with Spark/Glue, and Flink real-time observability."
   },
   {
     id: "ea",
-    stepNumber: 8,
-    title: "Enterprise Architecture and Director Engineering",
+    stepNumber: 7,
+    title: "Enterprise Technology & Engineering Leader",
     company: "Target Leadership Destination",
-    period: "2 Months Notice Period",
+    period: "Notice Period: 2 Months",
     level: "Executive Horizon",
     isTarget: true,
-    description: "Aligning cross-domain technology portfolios, cloud migration economics, data lakehouses, and high-performance engineering organizations with strategic business imperatives."
+    description: "Aligning cross-domain technology portfolios, multi-cloud data lakehouses, zero-downtime migrations, and high-performance engineering organizations with corporate strategy."
   }
 ];
 
 export const metricHighlights: MetricItem[] = [
   {
     value: "~70% Cut",
-    label: "Cloud FinOps Savings",
-    subtext: "Managed VPN + Kinesis vs Direct Connect/MSK Infrastructure",
-    iconName: "DollarSign"
+    label: "Strategic FinOps OPEX",
+    subtext: "Managed VPN + Kinesis vs Direct Connect/MSK Footprint",
+    iconName: "TrendingUp"
   },
   {
     value: "20+ Epics",
     label: "B2B Vertical Ownership",
-    subtext: "Architect-of-Record for Fare, Billing & Partner Integrations",
+    subtext: "Chief Architect for Fare, Billing & FedEx Integrations",
     iconName: "Layers"
   },
   {
     value: "750+ Lines",
-    label: "Migration Runbook",
-    subtext: "8-Role RACI with AWS DMS vs. GoldenGate Decision Matrix",
-    iconName: "FileCode"
+    label: "8-Role RACI Runbook",
+    subtext: "Cross-Functional Database Cutover Governance (DMS / OGG)",
+    iconName: "FileCheck"
   },
   {
     value: "20+ Yrs",
-    label: "Enterprise Architecture",
-    subtext: "From Mainframe Estates to Modern Cloud Lakehouses",
-    iconName: "Compass"
+    label: "Enterprise Experience",
+    subtext: "Leading Through Influence Without Authority",
+    iconName: "Users"
   }
 ];
 
 export const architectureDeepDives: ArchitectureDeepDive[] = [
   {
     id: "azure-aws-cross-cloud",
-    title: "Cross-Cloud Azure-to-AWS Data Lake Ingestion",
+    title: "Cross-Cloud Lakehouse Ingestion & Strategic FinOps (~70% OPEX Cut)",
     category: "cross-cloud",
     company: "Cubic Transportation Systems",
-    summary: "Architected the target ingestion blueprint extending the AWS data lake to capture Azure-hosted Kafka event streams and Oracle CDC transactional data over a secure Site-to-Site dual-tunnel VPN, cutting recurring network spend by ~70%.",
+    summary: "Influenced C-suite and Chief Architect roadmaps by authoring an alternatives-considered and TCO model for cross-cloud Azure-to-AWS ingestion; demonstrated that a managed Site-to-Site VPN and on-demand Kinesis ingestion path slashed recurring network and streaming OPEX by ~70% versus dedicated Direct Connect/ExpressRoute and self-managed MSK, accelerating the move to managed serverless AWS services.",
     problemStatement: "Critical transit device events and transactional payloads resided across heterogeneous Azure subscriptions, threatening fragmented analytics and requiring expensive dual pipeline maintenance without a standardized cross-cloud ingestion fabric.",
     topology: {
       nodes: [
@@ -171,10 +241,10 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
         { name: "AWS Kinesis Data Streams", type: "ingress" },
         { name: "S3 Data Lake & MSK Alerting Pipeline", type: "consumer" }
       ],
-      flowSummary: "Azure workloads traverse dual IPsec VPN tunnels into a self-managed Lambda Kafka ESM & Oracle GoldenGate CDC engine, landing directly in Kinesis Data Streams to feed existing DynamoDB, SQS, and ServiceNow alerting."
+      flowSummary: "Azure workloads traverse dual IPsec VPN tunnels into a self-managed Lambda Kafka ESM & Oracle GoldenGate CDC engine, landing directly in Kinesis Data Streams to feed existing DynamoDB, SQS, and ServiceNow alerting without rewriting consumers."
     },
     architecturalDecisions: [
-      "Cloud FinOps & Infrastructure Modernization: Formulated trade-off analysis demonstrating ~70% recurring cost savings using managed Site-to-Site VPN and on-demand Kinesis instead of dedicated Direct Connect / ExpressRoute and self-managed Kafka clusters, accelerating migration to serverless AWS services.",
+      "Strategic FinOps & Executive Advisory: Formulated trade-off analysis demonstrating ~70% recurring cost savings using managed Site-to-Site VPN and on-demand Kinesis instead of dedicated Direct Connect / ExpressRoute and self-managed Kafka clusters, accelerating migration to serverless AWS services.",
       "Consumer Preservation: Ingested Azure streams directly into Kinesis to reuse the entire downstream device-event, heartbeat, and alerting ecosystem without rewriting consumers.",
       "Resiliency: Engineered dual-tunnel failover with automated CloudWatch dead-letter monitoring and IAM least-privilege role scoping."
     ],
@@ -196,10 +266,10 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
   },
   {
     id: "flink-device-observability",
-    title: "Apache Flink Real-Time Device Observability Platform",
+    title: "Stream Observability Platform with Flink & Grafana",
     category: "stream-observability",
     company: "Cubic Transportation Systems",
-    summary: "Designed end-to-end stream processing architecture separating hot-path sub-second device heartbeats from cold-path audit analytics across multi-regional transit environments.",
+    summary: "Defined end-to-end architecture for an Apache Flink-based device telemetry and heartbeat platform (Flink, Lambda, DynamoDB, Grafana dashboards), governing design-approval, Terraform deployment, and QA validation across Hyderabad and New York environments.",
     problemStatement: "High-density transit validators and ticketing gates generate millions of continuous heartbeats; batch databases suffered write amplification and delayed fault detection by up to 45 minutes.",
     topology: {
       nodes: [
@@ -207,7 +277,7 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
         { name: "AWS Kinesis / MSK Stream", type: "ingress" },
         { name: "Apache Flink Stream Application", type: "processing" },
         { name: "Hot Path: DynamoDB + ServiceNow", type: "consumer" },
-        { name: "Cold Path: S3 Apache Iceberg Lake", type: "storage" }
+        { name: "Cold Path: S3 Lakehouse", type: "storage" }
       ],
       flowSummary: "Device telemetry streams into Apache Flink which evaluates sliding-window anomalies in real time, instantly alerting ServiceNow while sinking batch data into S3."
     },
@@ -216,7 +286,7 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
       "Stateful Sliding Windows: Flink managed checkpointing to detect device degradation patterns before total hardware failure occurs.",
       "Cross-Regional Deployment: Terraform parameterized deployment verified across Hyderabad and New York staging/production clusters."
     ],
-    techStack: ["Apache Flink", "AWS MSK", "Java 8/17", "DynamoDB", "AWS Lambda", "ServiceNow API", "Terraform", "CloudWatch"],
+    techStack: ["Apache Flink", "AWS MSK", "Java 8/17", "Python", "DynamoDB", "AWS Lambda", "ServiceNow API", "Terraform", "CloudWatch", "Grafana"],
     governanceAndRaci: {
       governanceProcesses: [
         "Jira Epic Delivery Ownership: Designed, estimated, and validated delivery gates",
@@ -233,17 +303,17 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
   },
   {
     id: "migration-runbook-governance",
-    title: "Enterprise Database Migration Runbook & Decision Framework",
+    title: "Production Zero-Downtime Migration Framework & 8-Role RACI",
     category: "governance-runbook",
     company: "Cubic Transportation Systems",
-    summary: "Authored 750+ line production migration runbook establishing standardized cutover procedures, snapshot/replica loading, and a deterministic AWS DMS vs. Oracle GoldenGate selection rubric.",
+    summary: "Led cross-functional adoption of standardized migration governance by authoring a 750+ line production migration runbook (RACI across 8 distinct roles) and reusable Terraform modules adopted by DBA, DevOps, and data engineering teams to execute zero/near-zero downtime database cutovers (AWS DMS, Oracle GoldenGate).",
     problemStatement: "Multi-terabyte production transit databases faced unacceptably high cutover risks and prolonged downtime windows due to inconsistent migration practices across distributed DBA and engineering teams.",
     topology: {
       nodes: [
-        { name: "Production Source Database", type: "source" },
+        { name: "Production Source Database (Oracle/DB2)", type: "source" },
         { name: "Read Replica / Storage Snapshot", type: "processing" },
-        { name: "DMS / GoldenGate CDC Sync", type: "ingress" },
-        { name: "Target AWS RDS / Aurora", type: "storage" },
+        { name: "AWS DMS / Oracle GoldenGate CDC", type: "ingress" },
+        { name: "Target PostgreSQL (RDS / Aurora)", type: "storage" },
         { name: "Zero-Downtime Traffic Cutover", type: "consumer" }
       ],
       flowSummary: "Full-load offloaded to read replica snapshots, followed by continuous CDC stream catch-up, concluding with DNS repointing under strict rollback gates."
@@ -251,9 +321,9 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
     architecturalDecisions: [
       "Production Isolation: Designed snapshot/replica-sourced full load pattern to isolate active operational databases from read lock starvation during initial migration.",
       "Selection Framework: Formulated cost vs. latency decision tree to deterministically select AWS DMS (standard relational tables) vs. Oracle GoldenGate (high-throughput complex schema CDC).",
-      "8-Role RACI: Codified responsibilities across Architect, DBA, Lead Dev, Network Eng, DevOps, Product Owner, QA, and Incident Commander."
+      "Cross-Functional RACI: Codified responsibilities across Architect, DBA, Lead Dev, Network Eng, DevOps, Product Owner, QA, and Incident Commander."
     ],
-    techStack: ["AWS DMS", "Oracle GoldenGate", "AWS RDS", "Aurora PostgreSQL", "Terraform", "Confluence Runbooks", "Route 53"],
+    techStack: ["AWS DMS", "Oracle GoldenGate (OGG)", "PostgreSQL", "AWS RDS", "Aurora PostgreSQL", "Oracle DB", "DB2", "Terraform", "Route 53"],
     governanceAndRaci: {
       raciRoles: ["Architect (Accountable)", "DBA (Responsible)", "DevOps (Responsible)", "Network (Consulted)", "QA (Informed)"],
       governanceProcesses: [
@@ -271,10 +341,10 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
   },
   {
     id: "identity-security-architecture",
-    title: "Two-Tier Identity Federation & Multi-Tenant Security",
+    title: "Serverless Event-Driven Microservices & IAM Security",
     category: "identity-security",
     company: "Cubic Transportation Systems",
-    summary: "Designed enterprise identity architecture harmonizing internal employee governance (IAM Identity Center / Managed AD) with external partner federations (Cognito SAML/OIDC) through a unified Lambda authorizer.",
+    summary: "Designed two-tier federation model (AWS Managed AD/IAM Identity Center for internal staff; Cognito with SAML/OIDC for third-party consumers) behind a unified Lambda authorizer with token-derived data isolation, fronted by CloudFront edge caching.",
     problemStatement: "Disparate user pools, conflicting access models between enterprise staff and external municipal transit partners, and complex multi-tenant data isolation requirements created compliance vulnerabilities.",
     topology: {
       nodes: [
@@ -282,7 +352,7 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
         { name: "AWS IAM Identity Center / AD", type: "ingress" },
         { name: "3rd-Party Municipal Partners", type: "source" },
         { name: "Amazon Cognito (SAML/OIDC)", type: "ingress" },
-        { name: "Unified API Gateway Lambda Authorizer", type: "processing" },
+        { name: "EventBridge & Unified API Gateway Authorizer", type: "processing" },
         { name: "Tenant-Isolated Services & S3", type: "storage" }
       ],
       flowSummary: "Both internal and partner credentials resolve at a centralized Lambda Authorizer which injects tenant claims into cryptographic JWT tokens for row-level DB and S3 policy isolation."
@@ -292,7 +362,7 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
       "Unified Lambda Authorizer: Single token validation layer decoupling API endpoints from upstream identity provider variations.",
       "Tenant Isolation: Token-derived tenant identifiers passed to downstream services, driving row-level database security and S3 prefix access policies."
     ],
-    techStack: ["AWS IAM Identity Center", "AWS Directory Service", "Amazon Cognito", "AWS Lambda", "API Gateway", "OAuth2 / SAML / OIDC"],
+    techStack: ["AWS EventBridge", "AWS SQS", "AWS SNS", "AWS IAM Identity Center", "Amazon Cognito", "AWS Lambda", "API Gateway", "CloudFront", "OAuth2 / SAML / OIDC"],
     governanceAndRaci: {
       governanceProcesses: [
         "Privacy Impact Assessment (PIA) and regulatory compliance audit",
@@ -306,43 +376,6 @@ export const architectureDeepDives: ArchitectureDeepDive[] = [
       finOpsAndTco: "Consolidated multiple legacy auth servers into managed AWS serverless services",
       reliabilityAndGovernance: "Passed stringent transit regulatory audits with automated multi-tenant audit trails"
     }
-  },
-  {
-    id: "banking-mainframe-modernization",
-    title: "Tier-1 Investment Banking Core Modernization (JPMC & Credit Suisse)",
-    category: "legacy-modernization",
-    company: "Cognizant Technology Solutions",
-    summary: "15-year tenure leading mission-critical modernization programs: Strangler Fig migration of Cobol/PL1/CICS mainframes into Java/Spring microservices, plus TDM 2.0 self-service test automation.",
-    problemStatement: "High MIPS licensing overhead, fragile monolithic batch cycles, and multi-day manual test data generation throttled digital transformation for core money market and credit systems.",
-    topology: {
-      nodes: [
-        { name: "Mainframe Core (Cobol/PL1/CICS)", type: "source" },
-        { name: "CORBA / REXX Orchestration Layer", type: "ingress" },
-        { name: "Strangler Reverse Proxy / API Gateway", type: "processing" },
-        { name: "Spring Boot Microservices & DB2", type: "storage" },
-        { name: "TDM 2.0 Self-Service Web Portal", type: "consumer" }
-      ],
-      flowSummary: "API gateways routed incremental transactions to Spring Boot microservices while CORBA and REXX bridges kept legacy mainframes synchronized in real time with zero downtime."
-    },
-    architecturalDecisions: [
-      "Strangler Fig Decoupling: Deconstructed monolithic banking functions into modular REST microservices without big-bang operational disruption.",
-      "TDM 2.0 Innovation: Built self-service web application automating test data generation, shrinking QA data prep time from days to minutes.",
-      "DevSecOps Pipeline: Early adoption of Jenkins, Docker, SonarQube, and Fortify for automated security vulnerability gating across global teams."
-    ],
-    techStack: ["Java 8+", "Spring Boot", "Cobol", "PL1", "CICS", "DB2", "SQL Server", "CORBA", "Docker", "Jenkins", "SonarQube"],
-    governanceAndRaci: {
-      governanceProcesses: [
-        "Rigorous financial reconciliation validation across OMNI and XAMIN systems",
-        "Automated static and dynamic security scanning gating production builds",
-        "Global team mentorship across US and India engineering centers"
-      ],
-      stakeholderEngagement: "Partnered directly with JPMC and Credit Suisse Managing Directors on risk reduction and release predictability."
-    },
-    quantifiableImpact: {
-      performance: "Shrank QA test data provisioning cycle from 3-4 days to under 2 minutes with TDM 2.0",
-      finOpsAndTco: "Substantial MIPS runtime cost reduction by offloading batch reconciliation to distributed Java services",
-      reliabilityAndGovernance: "Zero operational downtime across multi-year core banking system modernization cutovers"
-    }
   }
 ];
 
@@ -350,119 +383,258 @@ export const workExperience: ExperienceRole[] = [
   {
     id: "cubic",
     company: "Cubic Transportation Systems",
-    location: "Hyderabad, India",
+    location: "Hyderabad, India | Nov 2021 – Present",
     roles: [
       { title: "Data Architect", period: "Nov 2025 – Present", isCurrent: true },
       { title: "Software Architect", period: "Aug 2023 – Nov 2025" },
       { title: "Principal Software Engineer", period: "Nov 2021 – Jul 2023" }
     ],
+    roleDetails: [
+      {
+        title: "Data Architect",
+        period: "Nov 2025 – Present",
+        isCurrent: true,
+        keyTools: [
+          "AWS platform", "Lakehouse", "S3", "Glue", "Spark", "Lambda", "Kafka streaming", "MSK", "Kinesis", "Firehose",
+          "EventBridge", "DynamoDB", "RDS", "Postgres", "Oracle DB", "Flink", "SQS", "SNS", "API Gateway", "Cognito",
+          "CloudFront", "AWS DMS", "Oracle GoldenGate", "CDC", "Grafana", "CloudWatch", "Terraform", "Python"
+        ],
+        achievements: [
+          {
+            title: "Strategic FinOps & Executive Advisory",
+            description: "Influenced C-suite and Chief Architect roadmaps by authoring an alternatives-considered and TCO model for cross-cloud Azure-to-AWS ingestion; demonstrated that a managed Site-to-Site VPN and on-demand Kinesis ingestion path slashed recurring network and streaming OPEX by ~70% versus a dedicated Direct Connect/ExpressRoute and self-managed MSK footprint, accelerating the enterprise move to managed serverless AWS services."
+          },
+          {
+            title: "Cross-Organizational Influence",
+            description: "Led cross-functional adoption of standardized migration governance by authoring a 750+ line production migration runbook (RACI across 8 distinct roles) and reusable Terraform modules adopted by DBA, DevOps, and data engineering teams to execute zero/near-zero downtime database cutovers (AWS DMS, Oracle GoldenGate)."
+          },
+          {
+            title: "Cross-Cloud Lakehouse & Ingestion Pipeline",
+            description: "Architected target architecture extending AWS lakehouse to ingest Azure workloads via Lambda Kafka event-source mapping and Oracle GoldenGate CDC over dual-tunnel Site-to-Site VPN into Kinesis Data Streams, allowing the existing MSK-based consumer ecosystem (DynamoDB, SQS, ServiceNow) to repoint without rebuild."
+          },
+          {
+            title: "Stream Observability Platform",
+            description: "Defined end-to-end architecture for an Apache Flink-based device telemetry and heartbeat platform (Flink, Lambda, DynamoDB, Grafana dashboards), governing design-approval, Terraform deployment, and QA validation across Hyderabad and New York environments."
+          },
+          {
+            title: "Data Lake Sequencing & Modernization",
+            description: "Directed data lake storage tiering (raw/staging/analytics) and S3 data-lifecycle policies (hot/warm/cold), closing a retention-driven data loss risk; led delivery planning for Trip History API modernization (CDC, Aurora, Glue ETL) against a strict 5-minute SLA."
+          },
+          {
+            title: "Security & Multi-Tenant Identity Architecture",
+            description: "Designed a two-tier federation model (AWS Managed AD/IAM Identity Center for internal staff; Cognito with SAML/OIDC for third-party consumers) behind a unified Lambda authorizer with token-derived data isolation."
+          }
+        ]
+      },
+      {
+        title: "Software Architect",
+        period: "Aug 2023 – Nov 2025",
+        keyTools: [
+          "Java 8", "Spring Boot", "Spring Security", "Microservices", "TypeScript", "Angular", "Python", "Oracle DB",
+          "AWS (Lambda, API Gateway, Cognito, S3)", "Terraform", "SonarQube", "Fortify"
+        ],
+        achievements: [
+          {
+            title: "Operating Model & Delivery Redefinition",
+            description: "Influenced executive engineering leadership by formulating and presenting an 11-slide Systems Engineering Operating Model (RACI, governance checkpoints, KPIs); successfully established clear role boundaries between Architects and Engineering Managers and transitioned multi-sprint teams to Spec-Driven Development."
+          },
+          {
+            title: "B2B Vertical Technical Ownership",
+            description: "Served as architect-of-record for the enterprise B2B/employer-benefit vertical across 20+ Jira epics—governing program configuration, fixed-monthly-fee billing, funds-pool reload/refund logic, card replacement token synchronization, and partner shipping integrations (FedEx)."
+          },
+          {
+            title: "Collaborative Architecture Governance",
+            description: "Steered technical consensus and co-approved 45+ Confluence-tracked change designs spanning concession rules, multi-factor authentication (MFA) for system users, account/fraud controls, and external partner invoicing."
+          },
+          {
+            title: "AI-Assisted SDLC Pioneering",
+            description: "Early adopter of AI engineering workflows; introduced GitHub Copilot and Claude/Claude Code for deterministic code generation, technical reviews, and documentation, shortening feature delivery cycles across Java/Spring Boot, Python, and Terraform stacks."
+          },
+          {
+            title: "Generative AI Innovation",
+            description: "Designed and implemented RAG (Retrieval-Augmented Generation) POCs to build enterprise search assistants indexing Confluence runbooks, Swagger specs, and product documentation, improving team defect turnaround and root-cause resolution."
+          }
+        ]
+      },
+      {
+        title: "Principal Software Engineer",
+        period: "Nov 2021 – Jul 2023",
+        keyTools: [
+          "Java", "Spring Boot", "REST APIs", "Microservices", "Oracle SQL", "Docker", "Jenkins", "Fortify SCA", "SonarQube"
+        ],
+        achievements: [
+          {
+            title: "Solution Delivery & Microservices",
+            description: "Spearheaded core application architecture and high-level/low-level designs for high-throughput transit transaction microservices using Java 8, Spring Boot, and Oracle SQL."
+          },
+          {
+            title: "Team Mentorship & Standards",
+            description: "Mentored a 10-member cross-functional engineering team on secure coding standards, TDD, and CI/CD automation, ensuring seamless delivery alignment between onsite and offshore pods."
+          },
+          {
+            title: "Quality & Resiliency",
+            description: "Enforced code quality and security gates via SonarQube and Fortify, eliminating architectural technical debt and reducing post-release defect density."
+          }
+        ]
+      }
+    ],
     technologies: [
-      "AWS (DMS, MSK, Kinesis, Glue, S3, DynamoDB, RDS, Lambda, IAM Identity Center, Cognito)",
-      "Azure (VPN, Cross-Cloud Ingestion)",
+      "AWS (S3, Glue, Spark, Lambda, MSK, Kinesis, Firehose, EventBridge, DynamoDB, RDS, API Gateway, Cognito, CloudFront, Route 53, CloudWatch, SQS, SNS, IAM Identity Center, DMS)",
+      "Microsoft Azure (VPN Gateway, Cross-Cloud Networking)",
       "Terraform",
-      "Oracle GoldenGate",
+      "Oracle GoldenGate (OGG)",
       "Apache Kafka",
       "Apache Flink",
-      "Java 8/17",
+      "Apache Spark",
+      "Python",
+      "Java (8+)",
       "Spring Boot",
       "Spring Security",
       "TypeScript",
-      "Oracle SQL"
+      "Angular (2+/6+)",
+      "PostgreSQL",
+      "Oracle DB",
+      "Grafana",
+      "ServiceNow Alerting",
+      "Docker",
+      "Jenkins",
+      "SonarQube",
+      "Fortify SCA"
     ],
     summary: [
-      "Leading data architecture strategy for the enterprise platform, spanning database migration (AWS DMS, Oracle GoldenGate), streaming event architectures (Kafka/MSK/Kinesis), data lake governance, and identity/access federation.",
-      "Owned end-to-end software architecture for the B2B/employer-benefit program vertical across 20+ Jira epics and capabilities — from program configuration and funds-pool/billing logic through low-balance notifications, card replacement/token sync, and a B2B shipping (FedEx) integration.",
-      "Advised platform and engineering leadership on AWS cost modeling and phased delivery roadmaps, including a connectivity trade-off analysis showing managed Site-to-Site VPN and on-demand Kinesis cutting recurring network/streaming spend by ~70% versus Direct Connect and self-managed Kafka.",
-      "Spearheaded software architecture across enterprise transit platforms, authoring or co-approving 45+ Confluence-tracked change designs spanning B2B billing, concession integrations, fraud controls, and MFA security.",
-      "Adopted AI-assisted SDLC practices, using GitHub Copilot and Claude/Claude Code for code generation, code review, and technical documentation to shorten development cycles."
+      "Influenced C-suite and Chief Architect roadmaps through data-driven TCO modeling, demonstrating ~70% OPEX reduction for cross-cloud Azure-to-AWS lakehouse ingestion.",
+      "Authored 750+ line production database migration runbook with 8-role RACI governance, adopted by DBA and DevOps teams for zero/near-zero downtime cutovers.",
+      "Formulated 11-slide Systems Engineering Operating Model redefining Architect vs. Engineering Manager role boundaries and transitioning squads to Spec-Driven Development.",
+      "Architect-of-record for B2B employer-benefit vertical across 20+ Jira epics and 45+ Confluence-tracked architectural change approvals.",
+      "Early adopter of AI-assisted engineering with GitHub Copilot and Claude Code; architected enterprise RAG prototypes for defect analysis.",
+      "Practices servant leadership, mentoring 10+ member multi-disciplinary teams in secure coding standards, TDD, and CI/CD automation."
     ],
     keyProjects: [
       {
-        name: "B2B Program Vertical Ownership",
+        name: "Cross-Cloud Lakehouse Ingestion & Strategic FinOps (~70% OPEX Cut)",
+        category: "data-architecture",
+        description: "Influenced C-suite and Chief Architect roadmaps by authoring an alternatives-considered and TCO model for cross-cloud Azure-to-AWS ingestion; demonstrated that managed Site-to-Site VPN and on-demand Kinesis slashed recurring network/streaming OPEX by ~70% vs Direct Connect/MSK.",
+        tags: ["Strategic FinOps", "70% OPEX Cut", "Azure VPN", "Kinesis", "Executive Advisory"]
+      },
+      {
+        name: "Production Zero-Downtime Migration Runbook (8-Role RACI)",
+        category: "data-architecture",
+        description: "Led cross-functional adoption of standardized migration governance by authoring a 750+ line production migration runbook (RACI across 8 distinct roles) and reusable Terraform modules adopted across DBA, DevOps, and data teams.",
+        tags: ["8-Role RACI", "AWS DMS", "Oracle GoldenGate", "Governance", "Zero-Downtime"]
+      },
+      {
+        name: "Systems Engineering Operating Model (Spec-Driven Development)",
         category: "software-architecture",
-        description: "Acted as architect-of-record for the B2B/employer-benefit program vertical across 20+ epics and capabilities, from initial program-configuration and billing architecture through delivery, notifications, and partner shipping integration (FedEx) — serving as the primary technical and domain authority.",
-        tags: ["Architect-of-Record", "20+ Epics", "B2B Vertical", "FedEx Integration", "Funds Pool"]
+        description: "Influenced executive engineering leadership by formulating and presenting an 11-slide Systems Engineering Operating Model; successfully established clear role boundaries between Architects and EMs and transitioned squads to SDD.",
+        tags: ["Operating Model", "Spec-Driven Development", "RACI Governance", "Executive Buy-In"]
       },
       {
-        name: "Enterprise Data Migration Runbooks (AWS DMS & Oracle GoldenGate)",
+        name: "Stream Observability Platform with Flink & Grafana",
         category: "data-architecture",
-        description: "Authored 750+ line production migration runbook (RACI across 8 roles) plus on-prem/Azure companion runbook, snapshot/replica-sourced full-load pattern, and cost-based DMS-vs-OGG decision framework.",
-        tags: ["AWS DMS", "Oracle GoldenGate", "RACI Governance", "Zero-Downtime"]
+        description: "Defined end-to-end architecture for an Apache Flink-based device telemetry and heartbeat platform (Flink, Lambda, DynamoDB, Grafana dashboards), governing design-approval, Terraform deployment, and QA validation.",
+        tags: ["Apache Flink", "DynamoDB", "Lambda", "Grafana", "ServiceNow Alerting"]
       },
       {
-        name: "Azure-to-AWS Cross-Cloud Data Lake Ingestion (~70% Spend Cut)",
-        category: "data-architecture",
-        description: "Architected extension of AWS data lake to ingest Azure-hosted Kafka and Oracle workloads via Lambda event-source mapping and OGG CDC over Site-to-Site VPN into Kinesis Data Streams, cutting recurring network/streaming spend by ~70%.",
-        tags: ["Cross-Cloud", "Azure VPN", "Kinesis", "70% Cost Cut", "Serverless"]
-      },
-      {
-        name: "Flink-Based Device Observability Platform",
-        category: "data-architecture",
-        description: "Defined end-to-end architecture and led delivery of hot/cold-path device-event and heartbeat observability solution (Flink, Lambda, DynamoDB, ServiceNow alerting) across Hyderabad and NY.",
-        tags: ["Apache Flink", "Stream Processing", "DynamoDB", "ServiceNow Alerting"]
-      },
-      {
-        name: "MSK Streaming & Multi-Target Sink Architecture",
-        category: "data-architecture",
-        description: "Architected cross-VPC Kafka/MSK Connect pipeline for device event and heartbeat data, sinking to S3, DynamoDB, and PostgreSQL via a single feature-flagged Terraform module with DLQ error handling and Glue Schema Registry.",
-        tags: ["AWS MSK", "Kafka Connect", "Glue Schema Registry", "Terraform"]
-      },
-      {
-        name: "Data Lake Modernization & Trip History API Platform",
-        category: "data-architecture",
-        description: "Directed data lake sequencing (raw/staging/analytics) to eliminate retention-driven data-loss risk, and led discovery/delivery planning for Trip History API modernization against a 5-minute SLA.",
-        tags: ["Data Lake", "5-Min SLA", "CDC", "Aurora PostgreSQL", "AWS Glue"]
-      },
-      {
-        name: "Two-Tier Identity Federation & Multi-Tenant Security",
-        category: "data-architecture",
-        description: "Designed two-tier identity model (AWS Managed AD/IAM Identity Center for staff, Cognito with SAML/OIDC for third-party customers) behind a single Lambda authorizer with token-derived tenant data isolation.",
-        tags: ["IAM Identity Center", "Cognito", "Lambda Authorizer", "Multi-Tenant"]
-      },
-      {
-        name: "B2B Program Billing & Funds Pool Architecture",
+        name: "B2B Vertical Technical Ownership (20+ Epics)",
         category: "software-architecture",
-        description: "Designed fare-program product offering model driven by program type and fixed-monthly-fee billing, and authored privacy impact assessment and change design consolidating funds-pool reload-refund logic.",
-        tags: ["B2B Billing", "Funds Pool", "Confluence RFC", "Privacy Impact"]
+        description: "Chief technical architect for the B2B employer-benefit portfolio across 20+ Jira epics; governed program configuration, purse-allocation logic, monthly billing models, and FedEx shipping.",
+        tags: ["Chief Architect", "20+ Epics", "FedEx Integration", "Funds-Pool Logic"]
       },
       {
-        name: "Concession & Third-Party Benefit Program Integration",
+        name: "Generative AI (RAG) & AI-Assisted SDLC Pioneering",
         category: "software-architecture",
-        description: "Architected concession rules and invoicing for third-party benefit programs, including automated age-based concession approval/enrollment and attributed fare and invoicing for external partners.",
-        tags: ["Concession Engine", "Third-Party APIs", "Rules Engine"]
-      },
-      {
-        name: "B2B Account & Fraud Controls",
-        category: "software-architecture",
-        description: "Designed B2B account-management and fraud-control enhancements — credit card velocity checks, token/identity status synchronization on member status changes, and balance-transfer overrides.",
-        tags: ["Fraud Detection", "Velocity Checks", "Token Sync"]
-      },
-      {
-        name: "Generative AI (RAG) & Defect Root Cause Analysis",
-        category: "software-architecture",
-        description: "Designed and implemented POCs embedding Generative AI into existing platforms—leveraging RAG to build chatbots trained on Confluence and Swagger docs, plus AI-driven defect analysis and root cause prediction.",
-        tags: ["Generative AI", "RAG", "LLM Integration", "Defect RCA"]
+        description: "Architected and deployed RAG-based AI assistants referencing internal OpenAPI/Swagger specifications and Confluence documentation; introduced Claude Code and GitHub Copilot for defect analysis and rapid prototyping.",
+        tags: ["Generative AI", "RAG", "Claude Code", "GitHub Copilot", "Defect Prediction"]
       }
     ]
   },
   {
     id: "cognizant",
     company: "Cognizant Technology Solutions",
-    location: "Kolkata, India / New Jersey, USA",
+    location: "Kolkata, India | Jun 2006 – Oct 2021 (15 Years)",
     roles: [
-      { title: "Senior Associate (Solution Architect & Tech Lead)", period: "2012 – Oct 2021" },
-      { title: "Associate", period: "2009 – 2012" },
-      { title: "Programmer Analyst", period: "2007 – 2009" },
-      { title: "Programmer Analyst Trainee", period: "Jun 2006 – 2007" }
+      { title: "Senior Associate / Architect", period: "Jul 2015 – Oct 2021" },
+      { title: "Associate", period: "Oct 2009 – Jun 2015" },
+      { title: "Programmer Analyst / Trainee", period: "Jun 2006 – Sep 2009" }
+    ],
+    roleDetails: [
+      {
+        title: "Senior Associate / Architect",
+        period: "Jul 2015 – Oct 2021",
+        clients: "JPMorgan Chase (JPMC), Credit Suisse, QVC Inc.",
+        keyTools: [
+          "Java 8", "Spring Boot", "Angular 6+", "TypeScript", "SQL Server", "DB2", "Jenkins", "Docker", "Git", "SonarQube", "Fortify"
+        ],
+        achievements: [
+          {
+            title: "Enterprise Financial Platforms",
+            description: "Led solution architecture and backend design for enterprise banking platforms across global Tier-1 investment banks (JPMorgan Chase, Credit Suisse) and retail enterprises (QVC Inc.)."
+          },
+          {
+            title: "Institutional Money Market Trading (MMSY – JPMC)",
+            description: "Architected scalable backend services enabling institutional clients to trade money market instruments via digital interfaces, significantly improving trade throughput and platform reliability."
+          },
+          {
+            title: "Test Data Automation Platform (TDM 2.0)",
+            description: "Conceptualized, architected, and built an enterprise self-service web platform to automate test data generation, compressing multi-environment QA test data preparation time from several days to minutes."
+          },
+          {
+            title: "Stakeholder Management & Agile Transformation",
+            description: "Served as primary technical liaison between global client stakeholders, onshore leadership, and offshore delivery pods; standardized CI/CD toolchains (Jenkins, Docker, Git) to cut release cycle times."
+          },
+          {
+            title: "Code Governance & Security Audits",
+            description: "Led code reviews and technical governance across globally distributed teams, enforcing architectural compliance through SonarQube and Fortify static analysis."
+          }
+        ]
+      },
+      {
+        title: "Associate",
+        period: "Oct 2009 – Jun 2015",
+        keyTools: [
+          "Java", "JCL", "CICS", "DB2", "PL1", "VSAM", "REXX", "CORBA", "Mainframe (z/OS)", "UNIX"
+        ],
+        achievements: [
+          {
+            title: "Mainframe Modernization & Data Integration (XAMIN)",
+            description: "Architected a high-volume mainframe-to-UNIX data integration system, automating the extraction, transformation, and reconciliation of critical financial data between legacy OMNI and XAMIN accounting platforms."
+          },
+          {
+            title: "Core Banking Enhancements (Credit Suisse – GRANIT & KSEC2)",
+            description: "Enhanced mission-critical core banking applications supporting credit request processing, collateral evaluation, and product catalog management using Java, Spring MVC, DB2, and PL/1."
+          },
+          {
+            title: "Distributed Architecture & Middleware",
+            description: "Designed scalable REST-based microservices and backend components integrating distributed middleware (CORBA) with legacy mainframe transaction backends."
+          }
+        ]
+      },
+      {
+        title: "Programmer Analyst / Trainee",
+        period: "Jun 2006 – Sep 2009",
+        keyTools: [
+          "COBOL", "JCL", "CICS", "VSAM", "DB2"
+        ],
+        achievements: [
+          {
+            title: "Core Banking Batch & Online Systems",
+            description: "Developed, tested, and maintained high-volume batch and online transaction processing systems using COBOL, JCL, CICS, VSAM, and DB2 across global banking client engagements."
+          },
+          {
+            title: "Defect Resolution & Window Optimization",
+            description: "Partnered with QA and operations teams to resolve production defects, author technical specifications, and optimize database batch execution windows."
+          }
+        ]
+      }
     ],
     technologies: [
-      "Java 8+",
+      "Java (8+)",
       "Spring Boot",
-      "Angular 6+",
+      "Angular (6+)",
       "TypeScript",
       "SQL Server",
       "DB2",
-      "PL1",
+      "PL/1",
       "COBOL",
       "JCL",
       "VSAM",
@@ -472,37 +644,42 @@ export const workExperience: ExperienceRole[] = [
       "Docker",
       "Jenkins",
       "SonarQube",
-      "Fortify"
+      "Fortify",
+      "UNIX",
+      "Mainframe (z/OS)"
     ],
     summary: [
       "15-year tenure delivering strategic software design and engineering leadership for top-tier global institutions including JPMorgan Chase (JPMC), Credit Suisse, and QVC Inc.",
-      "Led end-to-end software design for mission-critical enterprise applications in banking and finance (money market trading, credit request processing, and accounting reconciliation).",
-      "Architected legacy modernization programs decoupling mainframe estates into resilient Java/Spring Boot microservices while standardizing DevOps toolchains (Jenkins, Docker, SonarQube, Fortify)."
+      "Architected high-throughput backend services for institutional money market trading at JPMC (MMSY); engineered resilient REST microservices enabling institutional client trading and trade reconciliation.",
+      "Spearheaded modernization of core banking and credit-approval modules at Credit Suisse (GRANIT & KSEC2); introduced automated Jenkins/Docker CI/CD pipelines and static code gates via SonarQube and Fortify, slashing deployment cycle times.",
+      "Conceptualized, architected, and built an enterprise self-service test data provisioning platform (TDM 2.0), compressing testing cycle times from multiple days to minutes and eliminating environment contention.",
+      "Served as primary technical liaison between global client stakeholders, onshore leadership, and offshore delivery pods.",
+      "Led code reviews and technical governance across globally distributed teams, enforcing architectural compliance through SonarQube and Fortify static analysis."
     ],
     keyProjects: [
       {
-        name: "TDM 2.0 (Test Data Management Portal)",
+        name: "Institutional Money Market Trading (MMSY – JPMC)",
         category: "banking-modernization",
-        description: "Built a self-service web application to automate test data generation, reducing test data preparation time from several days to minutes, vastly improving QA efficiency and test readiness.",
-        tags: ["Self-Service Web App", "Automation", "QA Velocity", "Java"]
+        description: "Architected high-throughput backend services for institutional money market trading; engineered resilient REST microservices directly enabling institutional client trading and trade reconciliation.",
+        tags: ["JPMC", "Money Market Trading", "High-Throughput", "Spring Boot", "Microservices"]
       },
       {
-        name: "MMSY (JPMorgan Chase Money Market Trading Platform)",
+        name: "Core Banking Modernization & DevOps (Credit Suisse – GRANIT & KSEC2)",
         category: "banking-modernization",
-        description: "Led backend design for institutional money market trading at JPMC, enabling institutional clients to trade directly via modern digital interfaces with high throughput and failover reliability.",
-        tags: ["JPMC", "Money Market Trading", "High Throughput", "Spring"]
+        description: "Spearheaded modernization of core banking and credit-approval modules; introduced automated Jenkins/Docker CI/CD pipelines and static code gates via SonarQube and Fortify, slashing deployment cycle times.",
+        tags: ["Credit Suisse", "Core Banking", "CI/CD DevOps", "SonarQube", "Fortify"]
       },
       {
-        name: "XAMIN (Mainframe-to-UNIX Data Integration)",
+        name: "Test Data Automation Platform (TDM 2.0)",
         category: "banking-modernization",
-        description: "Architected mainframe-to-UNIX data integration system, automating transfer and reconciliation of financial transaction records between OMNI and XAMIN accounting systems.",
-        tags: ["Data Reconciliation", "Mainframe", "UNIX", "OMNI/XAMIN"]
+        description: "Conceptualized, architected, and built an enterprise self-service web platform to automate test data generation, compressing multi-environment QA test data preparation time from several days to minutes.",
+        tags: ["TDM 2.0", "Self-Service", "Test Automation", "Zero Contention"]
       },
       {
-        name: "GRANIT & KSEC2 (Credit Suisse Core Banking)",
+        name: "Mainframe Modernization & Data Integration (XAMIN)",
         category: "banking-modernization",
-        description: "Enhanced mission-critical core banking applications supporting credit request processing and product catalog management, optimizing system response times and maintainability.",
-        tags: ["Credit Suisse", "Credit Processing", "Core Banking", "DB2"]
+        description: "Architected high-volume mainframe-to-UNIX data integration system, automating the extraction, transformation, and reconciliation of critical financial data between legacy OMNI and XAMIN accounting platforms.",
+        tags: ["XAMIN", "OMNI", "Mainframe-to-UNIX", "Reconciliation", "DB2"]
       }
     ]
   }
@@ -510,114 +687,118 @@ export const workExperience: ExperienceRole[] = [
 
 export const competencies: CompetencyCategory[] = [
   {
-    domain: "Domain & Industry Expertise",
-    iconName: "Briefcase",
-    skills: [
-      "Transit Fare & Payments Systems",
-      "B2B / Employer Benefit Program Administration",
-      "Funds Pool & Program Billing Logic",
-      "Fraud & Risk Controls (Velocity Checks)",
-      "Identity & Data Privacy (GDPR/DPIA Compliance)",
-      "Concession Rules & Eligibility Automation",
-      "Banking & Institutional Financial Services",
-      "Cloud Cost & Modernization Strategy"
-    ]
-  },
-  {
-    domain: "Data Platform & Streaming",
-    iconName: "Database",
-    skills: [
-      "Data Lake Architecture (S3 Hot/Warm/Cold Lifecycle)",
-      "Event Streaming (Apache Kafka, AWS MSK, Kinesis)",
-      "Stream Processing (Apache Flink)",
-      "Database Migration (AWS DMS, Oracle GoldenGate CDC)",
-      "Glue Catalog & Schema Registry",
-      "DynamoDB, RDS, Aurora PostgreSQL, DB2"
-    ]
-  },
-  {
-    domain: "Cloud & Infrastructure as Code",
+    domain: "Cloud & Lakehouse",
     iconName: "Cloud",
     skills: [
-      "AWS Enterprise Architecture",
-      "Azure Cross-Cloud Ingestion (Site-to-Site VPN)",
-      "Terraform Infrastructure as Code (IaC)",
-      "CI/CD Automation (Jenkins, Docker, GitHub Actions)",
-      "CloudWatch, Distributed Tracing & DLQ Patterns",
-      "Cloud FinOps (~70% Spend Reduction Analysis)"
+      "AWS Platform (S3, Glue, Lambda, Kinesis, Firehose)",
+      "EventBridge, DynamoDB, RDS, API Gateway, Cognito",
+      "CloudFront, Route 53, CloudWatch, SQS, SNS",
+      "IAM Identity Center & Single Sign-On (SSO)",
+      "Microsoft Azure (VPN Gateway, Cross-Cloud Ingestion)",
+      "Lakehouse Architecture & Multi-Tenant Data Isolation"
     ]
   },
   {
-    domain: "Application & Microservices Architecture",
+    domain: "Streaming, Ingestion & CDC",
+    iconName: "Database",
+    skills: [
+      "Apache Kafka & AWS Managed Streaming for Kafka (MSK)",
+      "Apache Flink Real-Time Telemetry Enrichment",
+      "Apache Spark & Glue ETL Batch Processing",
+      "Change Data Capture (CDC) & Oracle GoldenGate",
+      "AWS Database Migration Service (AWS DMS)",
+      "Dead Letter Queue (DLQ) Handling & Schema Registry"
+    ]
+  },
+  {
+    domain: "Databases & Migrations",
+    iconName: "Database",
+    skills: [
+      "Oracle DB & PostgreSQL (RDS / Aurora)",
+      "DynamoDB, DB2, MySQL, SQL Server, VSAM",
+      "AWS Database Migration Service (AWS DMS)",
+      "Oracle GoldenGate (OGG) Real-Time CDC",
+      "Zero/Near-Zero Downtime Production Cutovers"
+    ]
+  },
+  {
+    domain: "Infrastructure as Code & DevOps",
     iconName: "Layers",
     skills: [
-      "B2B Vertical Ownership (20+ Jira Epics)",
-      "Microservices Decoupling & Strangler Fig Pattern",
-      "Java 8-21 & Spring Boot Ecosystem",
-      "RESTful API Design & OpenAPI / Swagger",
-      "Domain-Driven Design (DDD) & Event-Driven Architecture",
-      "Angular 2-6+, TypeScript, Modern HTML5/CSS3"
+      "Terraform Infrastructure as Code (Modular Multi-Tier)",
+      "Docker Containerization & CI/CD Pipeline Automation",
+      "Jenkins CI/CD Automation & GitHub Actions",
+      "Git Version Control & Stonebranch Scheduler",
+      "Zero/Near-Zero Downtime Production Cutovers"
     ]
   },
   {
-    domain: "Identity, Security & DevSecOps",
-    iconName: "Shield",
-    skills: [
-      "Two-Tier Identity (AWS IAM Identity Center + Cognito)",
-      "Multi-Tenant Token-Derived Isolation",
-      "Multi-Factor Authentication (MFA) & SAML/OIDC",
-      "Static & Dynamic Code Quality (SonarQube, Fortify)",
-      "Zero-Trust Architecture & Least Privilege IAM",
-      "Privacy Impact Assessments (PIA) & Governance"
-    ]
-  },
-  {
-    domain: "Applied AI & Engineering Leadership",
-    iconName: "BrainCircuit",
-    skills: [
-      "Leadership Style: Influence Without Authority",
-      "AI-Assisted SDLC (GitHub Copilot, Claude/Claude Code)",
-      "Generative AI & RAG Chatbots (Confluence/Swagger docs)",
-      "AI-Based Defect Root Cause Prediction",
-      "Technical Governance & 8-Role RACI Runbooks",
-      "45+ Confluence-Tracked Architecture Change Approvals",
-      "Team Mentorship & Cross-Functional Alignment"
-    ]
-  },
-  {
-    domain: "Legacy Modernization & Mainframe",
+    domain: "Observability & Governance",
     iconName: "Server",
     skills: [
-      "Mainframe Estate Deconstruction (Cobol, PL1, CICS, JCL)",
-      "VSAM, DB2 & SQL Server Heterogeneous Reconciliation",
-      "Zero-Downtime Data & Application Cutover",
-      "REXX Scripting & Mainframe Automation",
-      "MIPS Reduction & Licensing Optimization"
+      "Grafana Custom Observability Dashboards",
+      "Amazon CloudWatch Metrics, Alarms & Logs",
+      "SonarQube & Fortify Static Code Analysis",
+      "S3 Data Lifecycle Management (Hot/Warm/Cold)",
+      "Tag-Based Access Control (TBAC)",
+      "GDPR / DPIA Privacy Impact Assessments"
+    ]
+  },
+  {
+    domain: "Programming & Frameworks",
+    iconName: "Briefcase",
+    skills: [
+      "Java (8/11/17) & Spring Boot, Spring MVC, Spring Security",
+      "Python (Data Processing, Automation, AI/ML)",
+      "TypeScript & Angular (2+/6+)",
+      "Microservices Design & REST APIs",
+      "Domain-Driven Design (DDD) & Test-Driven Development (TDD)"
+    ]
+  },
+  {
+    domain: "Mainframe & Modernization",
+    iconName: "Server",
+    skills: [
+      "Mainframe-to-Cloud Modernization",
+      "PL/1, COBOL, JCL, CICS, IMS, DB2, VSAM, REXX",
+      "CORBA Middleware Integration",
+      "High-Volume Mainframe-to-UNIX Data Pipelines"
+    ]
+  },
+  {
+    domain: "Domain Knowledge",
+    iconName: "Shield",
+    skills: [
+      "Transit Fare & Payments Systems",
+      "B2B / Employer Benefit Programs",
+      "Account & Fraud Controls (Velocity Checks)",
+      "Invoicing & Funds Pooling Architecture",
+      "Institutional Banking & Capital Markets (Money Market, Credit Risk)"
     ]
   }
 ];
 
 export const educationList: EducationItem[] = [
   {
-    degree: "MS in Machine Learning and AI",
+    degree: "Master of Science (M.S.) in Machine Learning & Artificial Intelligence",
     institution: "IIIT Bangalore & Liverpool John Moores University (Upgrad)",
     year: "In Progress",
-    status: "Advanced Specialization",
-    honors: "Specializing in Deep Learning, Natural Language Processing, and Generative AI Architectures"
+    status: "Advanced Master's Specialization",
+    honors: "Specializing in Deep Learning, Natural Language Processing, Transformer Models & Generative AI"
   },
   {
-    degree: "M.Tech in Computer Science",
-    institution: "Indian Institute of Technology (IIT), Dhanbad",
+    degree: "Master of Technology (M.Tech.) in Computer Science",
+    institution: "Indian Institute of Technology (IIT / ISM), Dhanbad",
     year: "2006",
     status: "Premier Institute of National Importance",
-    honors: "Advanced Algorithms, Distributed Systems & Database Theory"
+    honors: "Advanced Distributed Systems, Algorithms & Database Theory"
   },
   {
-    degree: "B.Tech in Computer Science and Information Technology",
+    degree: "Bachelor of Technology (B.Tech.) in Computer Science & Information Technology",
     institution: "Vignan's Engineering College, JNTU Hyderabad",
     year: "2004",
-    status: "First Class",
-    honors: "Core Computer Science and Software Engineering"
+    status: "First Class with Distinction",
+    honors: "Foundational Software Engineering, Systems Architecture & Core Algorithms"
   }
 ];
 
@@ -625,8 +806,8 @@ export const videoBriefingChapters: VideoChapter[] = [
   {
     startTime: 0,
     timestampDisplay: "0:00",
-    title: "20-Year Enterprise Horizon & Strategic Leadership",
-    description: "Executive overview of 20 years guiding high-concurrency systems evolution from core banking mainframes to modern multi-cloud data lakehouses.",
+    title: "20-Year Enterprise Horizon & Leadership Philosophy",
+    description: "Executive overview of 20 years guiding high-concurrency systems evolution and leading through influence without authority.",
     keyTakeaways: [
       "Strategic cross-domain architect bridging legacy, cloud, and data disciplines",
       "Elite engineering foundation: M.Tech from IIT Dhanbad and MS in AI/ML from IIIT-B",
@@ -636,7 +817,7 @@ export const videoBriefingChapters: VideoChapter[] = [
   {
     startTime: 15,
     timestampDisplay: "0:15",
-    title: "Modern Data Platform, Cross-Cloud Ingestion & Streaming (Cubic)",
+    title: "Strategic FinOps, Cross-Cloud Ingestion & Streaming (Cubic)",
     description: "Architecting cross-cloud Azure-to-AWS ingestion, Flink device telemetry, and 750+ line database migration runbooks with 8-role RACI.",
     keyTakeaways: [
       "Azure-to-AWS Site-to-Site VPN CDC ingestion into Kinesis Data Streams cutting spend by ~70%",
@@ -647,7 +828,7 @@ export const videoBriefingChapters: VideoChapter[] = [
   {
     startTime: 35,
     timestampDisplay: "0:35",
-    title: "Mission-Critical Legacy Modernization for Tier-1 Banks (Cognizant)",
+    title: "Spec-Driven Engineering & Banking Modernization (Cognizant)",
     description: "15-year tenure decoupling mission-critical Cobol/PL1/CICS estates into modern Java/Spring Boot microservices.",
     keyTakeaways: [
       "Strangler Fig deconstruction with zero operational downtime",
@@ -658,12 +839,12 @@ export const videoBriefingChapters: VideoChapter[] = [
   {
     startTime: 50,
     timestampDisplay: "0:50",
-    title: "Enterprise Architecture Philosophy & Target Executive Impact",
+    title: "Enterprise Technology & Engineering Leadership Horizon",
     description: "What Pavan delivers in Enterprise Architecture and Director Engineering roles.",
     keyTakeaways: [
-      "Architect-of-record for 20+ B2B epics with deep Transit Fare & Payment domain expertise",
-      "Early adopter of AI-assisted SDLC practices (GitHub Copilot, Claude/Claude Code)",
-      "Immediate availability for transformative enterprise leadership roles"
+      "Chief architect for 20+ B2B epics with deep Transit Fare & Payment domain expertise",
+      "Early adopter of AI-assisted SDLC practices (GitHub Copilot, Claude Code) and Python for AI/Automation",
+      "Notice Period: 2 Months for transformative enterprise leadership roles"
     ]
   }
 ];

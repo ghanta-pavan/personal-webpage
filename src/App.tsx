@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Perspective } from './types/portfolio';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
+import { LeadershipSection } from './components/LeadershipSection';
 import { CareerLadder } from './components/CareerLadder';
 import { ArchitectureShowcase } from './components/ArchitectureShowcase';
 import { ExperienceSection } from './components/ExperienceSection';
@@ -42,6 +43,9 @@ export function App() {
             onOpenVideoModal={() => setVideoModalOpen(true)}
             onOpenRecruiterDrawer={() => setRecruiterDrawerOpen(true)}
           />
+
+          {/* Core Leadership Principles & Governance Style */}
+          <LeadershipSection />
 
           {/* Interactive 7-Stage Career Progression Stepper */}
           <CareerLadder />

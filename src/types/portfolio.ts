@@ -17,7 +17,7 @@ export interface ContactInfo {
 export interface CredentialBadge {
   label: string;
   iconName: string;
-  category: 'pedigree' | 'experience' | 'tech' | 'leadership';
+  category: 'pedigree' | 'experience' | 'tech' | 'leadership' | 'availability';
   highlight?: boolean;
 }
 
@@ -65,11 +65,21 @@ export interface ArchitectureDeepDive {
   };
 }
 
+export interface RoleDetail {
+  title: string;
+  period: string;
+  isCurrent?: boolean;
+  clients?: string;
+  keyTools?: string[];
+  achievements: { title: string; description: string }[];
+}
+
 export interface ExperienceRole {
   id: string;
   company: string;
   location: string;
   roles: { title: string; period: string; isCurrent?: boolean }[];
+  roleDetails?: RoleDetail[];
   technologies: string[];
   summary: string[];
   keyProjects: {
@@ -100,4 +110,13 @@ export interface VideoChapter {
   title: string;
   description: string;
   keyTakeaways: string[];
+}
+
+export interface LeadershipPrinciple {
+  id: string;
+  title: string;
+  description: string;
+  iconName: string;
+  keyPractices: string[];
+  proofPoint: string;
 }

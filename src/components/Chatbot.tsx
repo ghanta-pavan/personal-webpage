@@ -8,7 +8,7 @@ import {
   ChevronRight,
   RefreshCw
 } from 'lucide-react';
-import { searchKnowledgeBase } from '../utils/knowledgeBase';
+import { searchKnowledgeBase, verifySkill } from '../utils/knowledgeBase';
 
 interface MessageAction {
   label: string;
@@ -33,12 +33,14 @@ interface ChatbotProps {
 }
 
 const INITIAL_SUGGESTIONS = [
-  "Executive Summary & Target Roles",
+  "Does Pavan know Apache Spark?",
+  "Has Pavan worked with Python?",
+  "Pavan's Leadership Principles & Governance",
+  "Spec-Driven Development (SDD) & Operating Model",
   "Azure-to-AWS ~70% FinOps Savings",
-  "Apache Flink & Device Observability",
-  "Tier-1 Banking Modernization",
-  "Identity & DevSecOps Architecture",
-  "How to Contact Pavan"
+  "Does Pavan know Kafka?",
+  "Apache Flink & Real-Time Observability",
+  "Executive Summary & Target Roles"
 ];
 
 const getCurrentTimeString = () => {
@@ -91,7 +93,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({
     {
       id: 'welcome-1',
       sender: 'bot',
-      text: `👋 Hi! I'm Pavan's **AI Executive Assistant** powered by a semantic search engine grounded in Pavan's portfolio data.\n\nAsk me anything about Pavan's 20+ years in Enterprise & Data Architecture, FinOps savings, real-time streaming, or legacy mainframe modernization!`,
+      text: `👋 Hi! I'm Pavan's **AI Executive Assistant & Skill Verification Engine** grounded directly in Pavan's 3-page resume.\n\nAsk me whether Pavan has a particular skill (e.g., *"Does Pavan know Apache Spark?"*, *"Has he worked with Python?"*, or *"Does he know Kafka?"*), or explore his 20+ years in Enterprise Lakehouses, Flink streaming, FinOps savings, or banking modernization!`,
       actions: [
         { label: '⚡ Recruiter Fast Screen', action: 'open_recruiter_drawer' },
         { label: '🎬 60s Video Briefing', action: 'open_video_modal' }
@@ -111,6 +113,20 @@ export const Chatbot: React.FC<ChatbotProps> = ({
   }, [messages, isChatOpen]);
 
   const processUserQuery = (queryText: string) => {
+    // 1. Check Skill Verification Engine
+    const skillCheck = verifySkill(queryText);
+    if (skillCheck && skillCheck.isSkillQuery) {
+      return {
+        responseText: skillCheck.responseText,
+        actions: [
+          { label: '⚡ Recruiter Fast Screen', action: 'open_recruiter_drawer' },
+          { label: '📊 View Competencies', action: 'scroll_to', target: 'competencies' },
+          { label: '🏢 View Work Experience', action: 'scroll_to', target: 'experience' }
+        ] as MessageAction[]
+      };
+    }
+
+    // 2. Semantic Search across Knowledge Base
     const { topChunk, matchScore } = searchKnowledgeBase(queryText);
 
     // If query has low relevance match, return helpful overview with guidance
@@ -123,7 +139,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({
       ];
 
       return {
-        responseText: `Pavan Kumar Ghanta is a **Data & Software Architect** with 20+ years leading enterprise cloud data lakehouses, real-time streaming (Flink/MSK), FinOps cost optimizations, and core banking modernizations.\n\nHere are popular topics you can ask me about:`,
+        responseText: `Pavan Kumar Ghanta is a **Data & Software Architect** with 20+ years leading enterprise cloud data lakehouses, real-time streaming (Spark/Flink/MSK), FinOps cost optimizations (~70% cut), and core banking modernizations.\n\nYou can ask whether Pavan has a specific skill (e.g. *"Does Pavan know Apache Spark?"* or *"Does he know Python?"*), or ask about any of his enterprise roles and projects:`,
         actions: fallbackActions
       };
     }

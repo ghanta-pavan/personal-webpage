@@ -22,20 +22,23 @@ export const RecruiterDrawer: React.FC<RecruiterDrawerProps> = ({ isOpen, onClos
   if (!isOpen) return null;
 
   const screeningChecklist = [
-    "Data & Solution Architecture",
-    "Cross-Cloud & AWS Migration",
-    "Data Lake & Streaming (Kafka/MSK/Kinesis)",
-    "Application & Microservices Development",
-    "Software Engineering Leadership",
-    "Agile & Scrum Delivery Planning",
-    "Java Full Stack Development",
-    "Mainframe Modernization (Cobol/PL1 to Java)",
-    "CI/CD Pipeline Management (Docker/Jenkins)",
-    "AI & Generative AI Integration (RAG/LLM)",
-    "Code Quality & Security (SonarQube, Fortify)",
-    "Microservices Design (Strangler Fig)",
-    "Stakeholder & Client Management",
-    "Team Mentoring & Technical Governance"
+    "Leadership: Influence Without Authority & Pod Unification",
+    "Leadership: Spec-Driven Development (SDD) & Systems Engineering Operating Model",
+    "Leadership: Strategic FinOps & Executive Cost Advisory (~70% Ingestion Cut)",
+    "Leadership: Architecture Review Boards (ARBs) & Blameless Post-Mortems",
+    "Enterprise Lakehouse (AWS S3, Glue, Spark, Athena)",
+    "Streaming Platforms (Apache Kafka, AWS MSK, Flink, Kinesis)",
+    "Database Migration & CDC (AWS DMS, Oracle GoldenGate)",
+    "Cross-Cloud Ingestion (Azure-to-AWS VPN, ~70% Spend Cut)",
+    "Cloud-Native & Serverless (Lambda, EventBridge, DynamoDB)",
+    "Infrastructure as Code (Terraform Modular IaC)",
+    "Programming (Python, Java 8+, Spring Boot, Angular, TypeScript)",
+    "Mainframe Modernization (COBOL, PL1, CICS, JCL to Cloud)",
+    "DevOps & Security (Docker, Jenkins, SonarQube, Fortify SCA)",
+    "Identity Federation (IAM Identity Center, Cognito SAML/OIDC)",
+    "Generative AI & RAG (Claude Code, GitHub Copilot, Defect RCA)",
+    "Transit Fare, Payments & B2B Vertical Ownership (20+ Epics)",
+    "Tier-1 Banking Modernization (JPMC - MMSY, Credit Suisse)"
   ];
 
   return (
@@ -88,6 +91,43 @@ export const RecruiterDrawer: React.FC<RecruiterDrawerProps> = ({ isOpen, onClos
                 <Briefcase size={14} className="stat-icon" />
                 <span className="stat-val">Cubic &amp; Cognizant</span>
                 <span className="stat-label">Enterprise Scope</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Core Leadership Principles & Governance Style */}
+          <div className="drawer-card">
+            <h4 className="card-section-title">Core Leadership Principles &amp; Governance</h4>
+            <div className="drawer-leadership-list">
+              <div className="drawer-leadership-item">
+                <span className="leadership-num">01</span>
+                <div className="leadership-item-text">
+                  <strong>Influence Without Authority &amp; Pod Unification:</strong> Aligns autonomous engineering pods, DBAs, DevOps, and C-suite leadership around high-stakes architecture shifts.
+                </div>
+              </div>
+              <div className="drawer-leadership-item">
+                <span className="leadership-num">02</span>
+                <div className="leadership-item-text">
+                  <strong>Strategic FinOps as 1st-Class Citizen:</strong> Formulated executive strategy proving cross-cloud VPN and Kinesis pipelines cut recurring AWS data ingestion expenses by ~70%.
+                </div>
+              </div>
+              <div className="drawer-leadership-item">
+                <span className="leadership-num">03</span>
+                <div className="leadership-item-text">
+                  <strong>Spec-Driven Development (SDD) &amp; Operating Model:</strong> Formulated an 11-slide Systems Engineering Operating Model with clear role boundaries, 8-role RACI, stage gates, and Confluence ADRs.
+                </div>
+              </div>
+              <div className="drawer-leadership-item">
+                <span className="leadership-num">04</span>
+                <div className="leadership-item-text">
+                  <strong>Pragmatic Technology Stewardship:</strong> Rigorous trade-off evaluations (TCO, latency SLAs, operational complexity) rather than industry hype.
+                </div>
+              </div>
+              <div className="drawer-leadership-item">
+                <span className="leadership-num">05</span>
+                <div className="leadership-item-text">
+                  <strong>Talent Multiplier &amp; Mentorship:</strong> Mentored 15+ senior engineers/leads; instituted blameless post-mortems and ARBs that reduced recurring production regressions by 40%.
+                </div>
               </div>
             </div>
           </div>
@@ -333,6 +373,45 @@ export const RecruiterDrawer: React.FC<RecruiterDrawerProps> = ({ isOpen, onClos
         .stat-label {
           font-size: 0.675rem;
           color: var(--text-muted);
+        }
+
+        .drawer-leadership-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .drawer-leadership-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          padding: 8px 10px;
+          background: rgba(15, 23, 42, 0.4);
+          border-radius: var(--radius-sm);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .leadership-num {
+          font-family: var(--font-mono);
+          font-size: 0.7rem;
+          font-weight: 800;
+          color: var(--accent-cyan);
+          background: rgba(6, 182, 212, 0.12);
+          border: 1px solid rgba(6, 182, 212, 0.25);
+          padding: 2px 6px;
+          border-radius: var(--radius-full);
+          flex-shrink: 0;
+          margin-top: 1px;
+        }
+
+        .leadership-item-text {
+          font-size: 0.8rem;
+          color: #cbd5e1;
+          line-height: 1.45;
+        }
+
+        .leadership-item-text strong {
+          color: var(--text-primary);
         }
 
         .drawer-wins-list {

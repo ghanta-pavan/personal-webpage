@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Perspective } from '../types/portfolio';
-import { 
-  FileText, 
-  Menu, 
+import {
+  FileText,
+  Menu,
   X,
   Printer,
   Play,
-  Bot
+  Bot,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -23,6 +25,27 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenChatbot
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('pavan_portfolio_theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        return savedTheme;
+      }
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return 'light';
+      }
+    }
+    return 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('pavan_portfolio_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   const handleScrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -44,13 +67,14 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
           <div className="brand-text">
             <span className="brand-name">Pavan Kumar Ghanta</span>
-            <span className="brand-role">Data &amp; Software Architect</span>
+            <span className="brand-role">Enterprise Technology Leader</span>
           </div>
         </a>
 
         {/* Desktop Section Links */}
         <nav className="navbar-nav desktop-nav">
           <a href="#top" onClick={handleScrollToTop}>Overview</a>
+          <a href="#leadership">Leadership</a>
           <a href="#career-ladder">Career Ladder</a>
           <a href="#architecture">Architecture</a>
           <a href="#experience">Experience</a>
@@ -61,18 +85,18 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Primary Navbar Actions */}
         <div className="navbar-actions">
-          {onOpenChatbot && (
+          {/* {onOpenChatbot && (
             <button
               className="btn btn-outline-cyan btn-sm ask-ai-nav-btn"
               onClick={onOpenChatbot}
               title="Ask Pavan's AI Assistant questions directly"
             >
               <Bot size={14} />
-              <span>Ask AI</span>
+              <span>Ask</span>
             </button>
-          )}
+          )} */}
 
-          <button 
+          <button
             className="btn btn-primary btn-sm recruiter-cta-btn"
             onClick={onOpenRecruiterDrawer}
             title="Fast screening summary for Executive Recruiters & Hiring Managers"
@@ -81,7 +105,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span>Recruiter Fast-Screen</span>
           </button>
 
-          <button 
+          {/* Dark / Light Mode Toggle Button */}
+          <button
+            className="btn btn-secondary btn-icon-only theme-toggle-btn"
+            onClick={toggleTheme}
+            title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            aria-label={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          >
+            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
+
+          <button
             className="btn btn-secondary btn-icon-only"
             onClick={handlePrint}
             title="Print or Save Official Executive PDF Resume"
@@ -90,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <Printer size={15} />
           </button>
 
-          <button 
+          <button
             className="mobile-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Navigation Menu"
@@ -105,6 +139,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="mobile-dropdown-menu">
           <nav className="mobile-nav-links">
             <a href="#top" onClick={handleScrollToTop}>Overview</a>
+            <a href="#leadership" onClick={() => setMobileMenuOpen(false)}>Leadership &amp; Governance</a>
             <a href="#career-ladder" onClick={() => setMobileMenuOpen(false)}>Career Ladder</a>
             <a href="#architecture" onClick={() => setMobileMenuOpen(false)}>Architecture Deep Dives</a>
             <a href="#experience" onClick={() => setMobileMenuOpen(false)}>Experience &amp; Projects</a>
@@ -114,8 +149,15 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
 
           <div className="mobile-actions-panel">
+            <button
+              className="btn btn-secondary btn-sm btn-full"
+              onClick={toggleTheme}
+            >
+              {theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
+              <span>{theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}</span>
+            </button>
             {onOpenChatbot && (
-              <button 
+              <button
                 className="btn btn-outline-cyan btn-sm btn-full"
                 onClick={() => { onOpenChatbot(); setMobileMenuOpen(false); }}
               >
@@ -132,7 +174,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span>Watch 60s Briefing</span>
               </button>
             )}
-            <button 
+            <button
               className="btn btn-primary btn-sm btn-full"
               onClick={() => { onOpenRecruiterDrawer(); setMobileMenuOpen(false); }}
             >

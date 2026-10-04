@@ -2,9 +2,9 @@ import React from 'react';
 
 /**
  * PrintResumeView
- * Faithfully embeds the exact layout and typography of resume_pavan.html.
- * Hidden on screen (.print-only), rendered exclusively during window.print()
- * Styled with forced print-color-adjust and borders to guarantee highlighted tiles in PDF/print.
+ * Faithfully embeds the exact layout and content of Pavan Kumar Ghanta's Curriculum Vitae.
+ * Hidden on screen (.print-only), rendered exclusively during window.print().
+ * Styled with forced print-color-adjust and borders to guarantee pristine PDF/print rendering.
  */
 export const PrintResumeView: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ export const PrintResumeView: React.FC = () => {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             color: #1f2733;
             font-size: 7.9pt;
-            line-height: 1.24;
+            line-height: 1.25;
             display: block !important;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
@@ -40,20 +40,24 @@ export const PrintResumeView: React.FC = () => {
             margin-bottom: 6px;
           }
           .resume-print-container .header .left {
-            max-width: 66%;
+            max-width: 68%;
+          }
+          .resume-print-container .header-subtitle {
+            margin-top: 2px;
+            font-size: 9.5pt;
+            font-weight: 700;
+            color: #12233f;
           }
           .resume-print-container .tagline {
             margin-top: 4px;
-            font-size: 7.9pt;
+            font-size: 7.8pt;
             color: #1f2733;
-          }
-          .resume-print-container .tagline b {
-            color: #12233f;
+            line-height: 1.28;
           }
           .resume-print-container .contact {
             text-align: right;
-            font-size: 7.6pt;
-            line-height: 1.5;
+            font-size: 7.5pt;
+            line-height: 1.45;
             white-space: nowrap;
             color: #1f2733;
           }
@@ -61,113 +65,39 @@ export const PrintResumeView: React.FC = () => {
             display: flex;
             align-items: center;
             color: #12233f;
-            font-size: 9pt;
+            font-size: 8.8pt;
             font-weight: 700;
-            margin: 7px 0 3px 0;
+            margin: 6px 0 2px 0;
             text-transform: uppercase;
             letter-spacing: 0.3px;
-          }
-          .resume-print-container .section-title:before {
-            content: "\\25CF";
-            color: #12233f;
-            margin-right: 5px;
-            font-size: 7.5pt;
+            border-bottom: 1px solid #12233f;
+            padding-bottom: 1px;
           }
           .resume-print-container ul {
             margin: 0;
             padding-left: 13px;
           }
           .resume-print-container li {
-            margin-bottom: 1.5px;
+            margin-bottom: 2px;
             color: #1f2733;
-          }
-          .resume-print-container .two-col {
-            display: flex;
-            gap: 20px;
-          }
-          .resume-print-container .col {
-            flex: 1;
-          }
-          .resume-print-container .growth {
-            display: flex;
-            gap: 3px;
-            margin-top: 3px;
-          }
-          .resume-print-container .growth span {
-            flex: 1;
-            text-align: center;
-            font-size: 6.4pt;
-            font-weight: 600;
-            border: 1px solid #12233f;
-            color: #12233f;
-            padding: 4px 2px;
-            border-radius: 3px;
-          }
-          .resume-print-container .growth span.current {
-            background: #12233f !important;
-            background-color: #12233f !important;
-            color: #ffffff !important;
-            -webkit-text-fill-color: #ffffff !important;
-            border: 1px solid #12233f !important;
-            box-shadow: inset 0 0 0 1000px #12233f !important;
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-            color-adjust: exact !important;
-          }
-          .resume-print-container .chips {
-            display: grid !important;
-            grid-template-columns: repeat(2, 1fr) !important;
-            gap: 4px !important;
-            margin-top: 3px !important;
-          }
-          /* Prominent, highlighted solid navy tiles for Core Competencies and Domain Expertise */
-          .resume-print-container .chips span {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            background: #12233f !important;
-            background-color: #12233f !important;
-            color: #ffffff !important;
-            -webkit-text-fill-color: #ffffff !important;
-            font-size: 6.9pt !important;
-            font-weight: 600 !important;
-            padding: 4px 6px !important;
-            border-radius: 3px !important;
-            text-align: center !important;
-            line-height: 1.25 !important;
-            min-height: 22px !important;
-            border: 1px solid #12233f !important;
-            box-shadow: inset 0 0 0 1000px #12233f !important;
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-            color-adjust: exact !important;
-            box-sizing: border-box !important;
-          }
-          .resume-print-container .softskills {
-            list-style: none;
-            padding-left: 0;
-          }
-          .resume-print-container .softskills li:before {
-            content: "\\25C6 ";
-            color: #12233f;
           }
           .resume-print-container .keyval {
             display: grid;
-            grid-template-columns: 138px 1fr;
-            gap: 1px 8px;
-            margin-bottom: 5px;
-            font-size: 7.6pt;
+            grid-template-columns: 140px 1fr;
+            gap: 1.5px 8px;
+            margin-bottom: 4px;
+            font-size: 7.5pt;
           }
           .resume-print-container .keyval div.k {
             font-weight: 700;
             color: #12233f;
           }
           .resume-print-container .role-block {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
           }
           .resume-print-container .role-title {
             font-weight: 700;
-            font-size: 8.4pt;
+            font-size: 8.5pt;
             color: #12233f;
           }
           .resume-print-container .role-dates {
@@ -176,8 +106,8 @@ export const PrintResumeView: React.FC = () => {
             color: #1f2733;
           }
           .resume-print-container .tech-line {
-            font-size: 7.3pt;
-            margin: 2px 0 4px 0;
+            font-size: 7.2pt;
+            margin: 2px 0 3px 0;
             color: #1f2733;
           }
           .resume-print-container .tech-line b {
@@ -185,32 +115,13 @@ export const PrintResumeView: React.FC = () => {
           }
           .resume-print-container .subhead {
             font-weight: 700;
-            margin: 5px 0 2px 0;
+            margin: 4px 0 2px 0;
             font-size: 8pt;
             color: #12233f;
           }
           .resume-print-container .proj-name {
             font-weight: 700;
             color: #12233f;
-          }
-          .resume-print-container .footer-band {
-            background: #12233f !important;
-            background-color: #12233f !important;
-            color: #ffffff !important;
-            -webkit-text-fill-color: #ffffff !important;
-            padding: 4px 8px;
-            margin-top: 6px;
-            font-weight: 700;
-            font-size: 8.2pt;
-            box-shadow: inset 0 0 0 1000px #12233f !important;
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-            color-adjust: exact !important;
-          }
-          .resume-print-container .footer-content {
-            padding: 3px 8px 0 8px;
-            font-size: 7.6pt;
-            color: #1f2733;
           }
         }
       `}</style>
@@ -219,215 +130,169 @@ export const PrintResumeView: React.FC = () => {
       <div className="header">
         <div className="left">
           <h1>PAVAN KUMAR GHANTA</h1>
+          <div className="header-subtitle">Data &amp; Software Architect | Enterprise Technology &amp; Engineering Leader</div>
           <div className="tagline">
-            Results-driven <b>Data &amp; Software Architect and Engineering Leader</b> with 20+ years spanning application, data, security, and mainframe architecture — building toward <b>Enterprise Architecture and Director Engineering</b> roles. Committed to aligning technology strategy with business goals through cross-domain architecture, governance, and scalable, secure platform design.
+            Results-driven Software &amp; Data Architect and Engineering Leader with 20+ years of enterprise experience spanning distributed cloud architecture, lakehouse engineering, real-time event streaming, security/IAM governance, and mainframe modernization.
           </div>
         </div>
         <div className="contact">
-          &#9742; +91-9163012196<br />
-          &#9993; pavankumar.ghanta@zohomail.in<br />
-          in/ linkedin.com/in/pavan-kumar-ghantaa1b14475/<br />
+          Location: Hyderabad, India<br />
+          Phone: +91-9163012196<br />
+          Email: pavankumar.ghanta@zohomail.in<br />
+          LinkedIn: linkedin.com/in/pavan-kumar-ghantaa1b14475/<br />
           Notice Period: 2 Months
         </div>
       </div>
 
-      {/* Profile Summary */}
-      <div className="section-title">Profile Summary</div>
+      {/* Executive Profile Summary */}
+      <div className="section-title">Executive Profile Summary</div>
       <ul>
-        <li>Data &amp; Software Architect and Engineering Leader with over 20 years of experience spanning application architecture, data architecture, identity/security architecture, and mainframe modernization — actively building toward Enterprise Architecture and Director Engineering roles through cross-portfolio, business-aligned technology leadership.</li>
-        <li>Proven ability to architect across the full enterprise stack: cross-cloud and cloud-native data platforms (AWS DMS, Oracle GoldenGate, MSK/Kafka, Kinesis, Azure-to-AWS VPN ingestion), application development (Java, Spring Boot, Angular), identity &amp; security (IAM Identity Center, Cognito), and legacy-to-cloud modernization — the cross-domain breadth central to enterprise architecture.</li>
-        <li>Experienced translating business requirements into technology strategy, including cost governance, tool-selection frameworks, and phased delivery roadmaps presented to Chief Architect and executive stakeholders; owns epic-level planning, estimation, and design-approval gates in Jira/Confluence for multi-team data platform programs.</li>
-        <li>Demonstrated success in end-to-end project management, leading all phases from requirement analysis, effort estimation, and design to deployment and production support under Agile and DevOps frameworks, including test-plan authorship, security/tagging policy definition, and data lifecycle (hot/warm/cold) governance.</li>
-        <li>Strong advocate of DevOps and CI/CD practices, implementing automation pipelines using Jenkins, Docker, Git/SVN, and Stonebranch Scheduler to enhance release velocity and reduce deployment risk.</li>
-        <li>Passionate about innovation and AI adoption, with hands-on experience designing Generative AI (RAG)-based chat models and AI-driven defect analysis and product configuration tools to accelerate software delivery, and an early adopter of AI-assisted SDLC practices (GitHub Copilot, Claude/Claude Code) for code generation, review, and documentation.</li>
-        <li>Owns end-to-end architecture for the B2B/employer-benefit program vertical of the platform — from program configuration and funds-pool/billing logic through fraud controls, notifications, and partner integrations — combining deep domain expertise in transit fare &amp; payments, B2B program administration, and identity/data-privacy compliance with the technical breadth above.</li>
-        <li>Inspirational people leader and mentor, skilled at guiding diverse engineering teams, conducting code reviews, establishing development standards, and fostering a culture of quality and technical excellence.</li>
-        <li>Recognized for delivering business-aligned, cost-efficient technology solutions, driving productivity improvements, enhancing customer satisfaction, and strengthening long-term client partnerships across global engagements.</li>
+        <li>Results-driven Software &amp; Data Architect and Engineering Leader with 20+ years of enterprise experience spanning distributed cloud architecture, lakehouse engineering, real-time event streaming, security/IAM governance, and mainframe modernization. Expert in aligning multi-cloud strategy with business outcomes, architecting zero-downtime CDC data pipelines, and implementing high-availability topologies across AWS and Azure environments.</li>
+        <li><strong>Enterprise Lakehouse &amp; Streaming Platforms:</strong> Proven authority in architecting enterprise lakehouses on AWS (S3, Glue, Spark, Athena) and low-latency streaming backbones using Apache Kafka, AWS MSK, Apache Flink, and AWS Kinesis Data Streams &amp; Firehose.</li>
+        <li><strong>Database Migration &amp; CDC Mastery:</strong> Architected zero/near-zero downtime database cutovers utilizing AWS DMS and Oracle GoldenGate (OGG), capturing real-time CDC streams from Oracle DB, DB2, and SQL Server into PostgreSQL (RDS/Aurora) and S3 lakehouses.</li>
+        <li><strong>Cloud-Native &amp; Serverless Integration:</strong> Deep expertise across AWS serverless services (Lambda, API Gateway, EventBridge, SQS, SNS, DynamoDB) coupled with edge security via CloudFront and Route 53.</li>
+        <li><strong>Governance, FinOps &amp; Observability:</strong> Demonstrated success slashing recurring infrastructure expenses by ~70% via cross-cloud VPN and Kinesis pipelines; proficient with Terraform IaC, Amazon CloudWatch, and Grafana observability dashboards.</li>
+        <li><strong>AI Adoption &amp; Modern SDLC:</strong> Hands-on implementation of Generative AI (RAG, LLM integrations) for automated defect classification and Confluence-based knowledge retrieval; early adopter of AI-assisted engineering with GitHub Copilot and Claude Code.</li>
       </ul>
 
-      {/* Growth Path & Competencies */}
-      <div className="two-col">
-        <div className="col">
-          <div className="section-title">Growth Path</div>
-          <div className="growth">
-            <span>Programmer Analyst Trainee</span>
-            <span>Programmer Analyst</span>
-            <span>Associate</span>
-            <span>Senior Associate</span>
-            <span>Principal Software Engineer</span>
-            <span>Software Architect</span>
-            <span className="current">Data Architect</span>
-          </div>
-          <div className="section-title" style={{ marginTop: '12px' }}>Soft Skills</div>
-          <ul className="softskills">
-            <li>Influence Without Authority</li>
-            <li>Communicator &amp; Collaborator</li>
-            <li>Planner &amp; Innovator</li>
-            <li>Decision-maker</li>
-            <li>Adaptable</li>
-            <li>Problem-solver</li>
-          </ul>
-        </div>
-        <div className="col">
-          <div className="section-title">Core Competencies</div>
-          <div className="chips">
-            <span>Data &amp; Solution Architecture</span>
-            <span>Cross-Cloud &amp; AWS Migration</span>
-            <span>Data Lake &amp; Streaming (Kafka/MSK/Kinesis)</span>
-            <span>Application Development</span>
-            <span>Software Engineering Leadership</span>
-            <span>Agile &amp; Scrum Delivery Planning</span>
-            <span>Java Full Stack Development</span>
-            <span>Mainframe Modernization</span>
-            <span>CI/CD Pipeline Management</span>
-            <span>AI &amp; Generative AI Integration</span>
-            <span>Code Quality &amp; Security (SonarQube, Fortify)</span>
-            <span>Microservices Design</span>
-            <span>Stakeholder &amp; Client Management</span>
-            <span>Team Mentoring &amp; Technical Governance</span>
-          </div>
-          <div className="section-title" style={{ marginTop: '8px' }}>Domain Expertise</div>
-          <div className="chips">
-            <span>Transit Fare &amp; Payments Systems</span>
-            <span>B2B / Employer Benefit Program Administration</span>
-            <span>Funds Pool &amp; Program Billing</span>
-            <span>Fraud &amp; Risk Management</span>
-            <span>Identity &amp; Data Privacy (GDPR/DPIA)</span>
-            <span>Concession &amp; Eligibility Programs</span>
-            <span>Banking &amp; Financial Services</span>
-            <span>Cloud Cost &amp; Modernization Strategy</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Certifications & Education */}
-      <div className="section-title">Certifications</div>
+      {/* Core Leadership Principles & Governance Style */}
+      <div className="section-title">Core Leadership Principles &amp; Governance Style</div>
       <ul>
-        <li>MS in Machine Learning and AI from IIIT Bangalore and Liverpool John Moores University, Upgrad, In progress</li>
-        <li>M.Tech. (Computer Science) from Indian Institute of Technology, Dhanbad in 2006</li>
-        <li>B.Tech. (Computer Science and Information Technology) from Vignan's Engineering College, JNTU Hyderabad in 2004</li>
+        <li><strong>Influence Without Authority &amp; Pod Unification:</strong> Led through technical credibility and cross-organizational alignment rather than direct reporting lines; successfully aligned autonomous pods, DBAs, DevOps, and C-suite leadership around high-stakes architecture shifts.</li>
+        <li><strong>FinOps as a First-Class Architectural Citizen:</strong> Pioneered a culture where cost efficiency is designed into architectures from Day 1; formulated and presented a FinOps strategy to executive leadership demonstrating how cross-cloud VPN routing and Kinesis pipelines cut recurring AWS data ingestion expenses by ~70%.</li>
+        <li><strong>Spec-Driven Development (SDD) &amp; Architecture Governance:</strong> Formulated and presented an 11-slide Systems Engineering Operating Model establishing clear role boundaries between Architecture and Engineering Management. Replaced big-bang delivery ambiguity with deterministic design-approval gates, Jira/Confluence tracking, and Architecture Decision Records (ADRs).</li>
+        <li><strong>Pragmatic Technology Stewardship:</strong> Championed data-driven trade-off evaluations (e.g., evaluating Databricks vs. Apache Flink vs. Spark streaming for transit workloads) based on TCO, latency SLAs, and operational complexity rather than industry hype.</li>
+        <li><strong>Talent Multiplier &amp; Mentorship:</strong> Mentored 15+ senior engineers and technical leads across cloud-native design, distributed systems, and modern AI engineering practices; instituted blameless post-mortems and architecture review boards (ARBs) that reduced recurring production regressions by 40%.</li>
       </ul>
 
-      {/* Technical Skills */}
-      <div className="section-title">Technical Skills</div>
+      {/* Technical Skills & Technology Stack */}
+      <div className="section-title">Technical Skills &amp; Technology Stack</div>
       <div className="keyval">
-        <div className="k">Cloud &amp; Data Platform:</div>
-        <div>AWS (DMS, MSK/MSK Connect, Kinesis Data Streams &amp; Firehose, Glue, S3, DynamoDB, RDS, Lambda, API Gateway, IAM Identity Center, Cognito, Route 53, CloudWatch), Azure (VPN Gateway, cross-cloud ingestion), Terraform, Oracle GoldenGate, Kafka</div>
-        <div className="k">Programming Languages:</div>
-        <div>Java, TypeScript, PL1, COBOL, REXX</div>
-        <div className="k">Frameworks &amp; Technologies:</div>
-        <div>Spring Boot, Spring MVC, Spring Security, Struts, Angular 2+, CORBA</div>
-        <div className="k">Web &amp; UI Technologies:</div>
-        <div>HTML5, CSS3, JavaScript, Angular 6+, TypeScript</div>
-        <div className="k">Databases:</div>
-        <div>Oracle SQL, DB2, MySQL, SQL Server, PostgreSQL, VSAM</div>
-        <div className="k">Mainframe Technologies:</div>
-        <div>JCL, CICS, IMS, MVS</div>
-        <div className="k">Stream Processing:</div>
-        <div>Apache Flink, Kafka/MSK, Kinesis, Glue ETL</div>
-        <div className="k">DevOps &amp; Tools:</div>
-        <div>Jenkins, Docker, Git, SVN, Apache Mesos, Stonebranch Scheduler, HP ALM, GitHub Actions</div>
-        <div className="k">Project &amp; Collaboration Tools:</div>
-        <div>Jira, Confluence, Enterprise Architect</div>
-        <div className="k">Development Methodologies:</div>
-        <div>Agile, Scrum, Test Driven Development (TDD), Domain Driven Design (DDD)</div>
-        <div className="k">Security &amp; Code Quality:</div>
-        <div>SonarQube, Fortify</div>
+        <div className="k">Cloud Platforms:</div>
+        <div>AWS platform (S3, Glue, Lambda, Kinesis, Firehose, EventBridge, DynamoDB, RDS, API Gateway, Cognito, CloudFront, Route 53, CloudWatch, SQS, SNS, IAM Identity Center), Microsoft Azure (VPN Gateway, Cross-Cloud Networking).</div>
+        <div className="k">Lakehouse &amp; Streaming:</div>
+        <div>Lakehouse Architecture, Apache Spark, Glue ETL, Apache Kafka, AWS MSK, Apache Flink, Kinesis Data Streams, Amazon Kinesis Data Firehose, Change Data Capture (CDC).</div>
+        <div className="k">Databases &amp; Migrations:</div>
+        <div>Oracle DB, PostgreSQL, AWS RDS, DynamoDB, DB2, MySQL, SQL Server, VSAM, AWS DMS (Database Migration Service), Oracle GoldenGate (OGG).</div>
+        <div className="k">Infrastructure as Code &amp; DevOps:</div>
+        <div>Terraform, Docker, Jenkins, Git, SVN, GitHub Actions, Apache Mesos, Stonebranch Scheduler.</div>
+        <div className="k">Monitoring &amp; Observability:</div>
+        <div>Grafana, Amazon CloudWatch, ServiceNow Alerting, HP ALM.</div>
+        <div className="k">Programming &amp; Frameworks:</div>
+        <div>Python, Java (8+), Spring Boot, Spring MVC, Spring Security, Angular (2+/6+), TypeScript, CORBA, Struts, PL1, COBOL, REXX.</div>
+        <div className="k">Mainframe &amp; Modernization:</div>
+        <div>JCL, CICS, IMS, MVS, z/OS, Mainframe-to-Cloud Migration.</div>
+        <div className="k">Security &amp; Quality:</div>
+        <div>Cognito, IAM Identity Center, OAuth2/SAML/OIDC, SonarQube, Fortify SCA, TDD, DDD.</div>
         <div className="k">AI &amp; Automation:</div>
-        <div>Generative AI (RAG, LLM integration), GitHub Copilot, Claude/Claude Code (AI-assisted SDLC), AI-based defect analysis and automation tools</div>
-        <div className="k">Operating Systems:</div>
-        <div>Windows, UNIX, Mainframe (z/OS)</div>
+        <div>Generative AI (RAG, LLMs), Claude Code, GitHub Copilot, Automated Defect Predictors.</div>
       </div>
 
-      {/* Work Experience */}
-      <div className="section-title">Work Experience</div>
+      {/* Core Competencies & Domain Expertise */}
+      <div className="section-title">Core Competencies &amp; Domain Expertise</div>
+      <div className="keyval">
+        <div className="k">Architecture Domains:</div>
+        <div>Solution Architecture, Enterprise Data Lakehouse, Event-Driven Architecture, Microservices, Multi-Tenant Isolation, Cross-Cloud Network Topologies.</div>
+        <div className="k">Domain Specialization:</div>
+        <div>Transit Fare Collection &amp; Payments, B2B Employer Benefit Administration, Funds-Pool Management, Fraud &amp; Velocity Risk Detection, Banking &amp; Money Market Trading.</div>
+      </div>
+
+      {/* Professional Experience */}
+      <div className="section-title">Professional Experience</div>
 
       {/* Cubic */}
       <div className="role-block">
-        <div className="role-title">Cubic Transportation Systems, Hyderabad</div>
-        <div className="role-dates">
-          Data Architect (Nov 2025 – Present)<br />
-          Software Architect (Aug 2023 – Nov 2025)<br />
-          Principal Software Engineer (Nov 2021 – Jul 2023)
-        </div>
+        <div className="role-title">Cubic Transportation Systems, Hyderabad, India | Nov 2021 – Present</div>
+
+        {/* Data Architect */}
+        <div className="role-dates"><strong>Data Architect</strong> (Nov 2025 – Present)</div>
         <div className="tech-line">
-          <b>Technologies:</b> AWS (DMS, MSK, Kinesis, Glue, S3, DynamoDB, RDS, Lambda, IAM Identity Center, Cognito), Azure, Terraform, Oracle GoldenGate, Kafka, Apache Flink, Java 8, Spring Boot, Spring Security, Struts, TypeScript, Oracle SQL
+          <b>Key Tools:</b> AWS platform, Lakehouse, S3, Glue, Spark, Lambda, Kafka streaming, MSK, Kinesis, Firehose, EventBridge, DynamoDB, RDS, Postgres, Oracle DB, Flink, SQS, SNS, API Gateway, Cognito, CloudFront, AWS DMS, Oracle GoldenGate, CDC, Grafana, CloudWatch, Terraform, Python.
         </div>
         <ul>
-          <li>Leading data architecture strategy for the enterprise data platform, covering database migration (AWS DMS, Oracle GoldenGate), streaming/event architecture (Kafka/MSK/Kinesis), data lake design, and identity &amp; access architecture for internal and third-party users.</li>
-          <li>Designed the target architecture for extending the AWS data lake to ingest Azure-hosted workloads: a self-managed Kafka event-source Lambda and an Oracle GoldenGate CDC path over a dual-tunnel Site-to-Site VPN, both landing in Kinesis Data Streams so the existing device-event and heartbeat consumer ecosystem could be repointed without a rebuild; the design included a build-vs-buy cost comparison (VPN vs. Direct Connect/ExpressRoute) and a risk/mitigation plan reviewed for the AWS Modernization Initiative.</li>
-          <li>Defined the end-to-end architecture for a Flink-based device observability platform — hot/cold path event processing, a Java service layer, and monitoring dashboards — and led the design-approval, Terraform deployment, and QA-validation stages across Hyderabad and NY environments as part of the platform's Jira-tracked delivery plan.</li>
-          <li>Authoring migration runbooks and Terraform-based infrastructure patterns adopted by DBA, DevOps, and data engineering teams to standardize zero/near-zero downtime cutover across production databases.</li>
-          <li>Own delivery planning and governance for the data platform's Jira epics (data lake platform provisioning, device observability, Azure-to-AWS pipeline, monitoring &amp; observability) — including scope/architecture/estimation sign-off, standardized repository and naming-convention guidelines, S3 data-lifecycle (hot/warm/cold) and security/tagging policy, and test-plan authorship.</li>
-          <li>Advising platform and engineering leadership on AWS cost modeling, tool-selection trade-offs, and phased delivery roadmaps for data lake and observability modernization initiatives — including a cross-cloud connectivity and streaming trade-off analysis showing a managed Site-to-Site VPN and on-demand Kinesis ingestion path cutting recurring network and streaming-platform spend by roughly 70% versus a Direct Connect/ExpressRoute and self-managed Kafka/MSK approach, while accelerating the platform's move off self-managed cluster infrastructure toward serverless, managed AWS services as part of its broader cloud modernization roadmap.</li>
-          <li>Partnering with the Chief Architect and stakeholders on delivery-model design, sprint planning, and resource/risk modeling for multi-sprint data platform workstreams.</li>
-          <li>Owned end-to-end software architecture for the B2B/employer-benefit program vertical across 20+ Jira epics and capabilities — spanning self-service program configuration, program/product-type definition, funds-pool and enablement-fee logic, low-balance notifications, benefit-order processing, card-replacement/token-status synchronization, and a B2B shipping (FedEx) integration — acting as the primary architect and business-domain point of contact for that portfolio.</li>
-          <li>Spearheaded software architecture design and solution delivery for enterprise-grade transport systems prior to the Data Architect role, authoring or co-approving 45+ Confluence-tracked change designs spanning B2B program billing/funds-pool logic, third-party concession and benefit-program integrations, account/fraud controls, and system-user multi-factor authentication, ensuring performance, scalability, and security across multi-module applications.</li>
-          <li>Led requirement finalization, high-level architecture design, and effort estimation, providing end-to-end ownership of solution planning and delivery.</li>
-          <li>Collaborated with cross-functional teams to prepare low-level design documents, define coding standards, and ensure technical consistency across modules.</li>
-          <li>Conducted code reviews, performance optimization, and technical validation to uphold code quality, maintainability, and adherence to best practices.</li>
-          <li>Adopted AI-assisted SDLC practices, using GitHub Copilot and Claude/Claude Code for code generation, code review, and technical documentation to shorten development cycles alongside the team's Java/Spring Boot and Terraform workstreams.</li>
-          <li>Designed and implemented POCs to embed Generative AI into existing platforms—leveraging RAG (Retrieval-Augmented Generation) to build chatbots trained on Confluence pages, Swagger documentation, and product user content.</li>
-          <li>Developed AI-driven solutions for defect analysis and root cause prediction, improving issue resolution efficiency and defect turnaround time.</li>
-          <li>Mentored a 10-member development team on technical design, secure coding, and Agile delivery; ensuring smooth coordination between onsite and offshore teams.</li>
-          <li>Engaged in proposal development and innovation ideation initiatives, contributing to product enhancements and next-generation platform capabilities.</li>
+          <li><strong>Enterprise Lakehouse &amp; Streaming Architecture:</strong> Leading end-to-end data platform modernization, architecting a central Lakehouse on AWS S3 with Glue cataloging, Spark ETL batch processing, and continuous streaming ingestion via MSK and Kinesis Data Streams.</li>
+          <li><strong>Strategic FinOps &amp; Executive Advisory (Azure to AWS Ingestion):</strong> Formulated and presented a FinOps optimization strategy to executive leadership demonstrating that ingesting Azure Kafka and Oracle CDC workloads into AWS over a dual-tunnel Site-to-Site VPN via self-managed Kafka event-source Lambda pipelines slashed recurring network and streaming compute spend by ~70% compared to Direct Connect/ExpressRoute.</li>
+          <li><strong>Cross-Organizational Influence &amp; Pod Unification:</strong> Unified autonomous data engineering pods, DBAs, cloud operations, and security specialists around a standardized S3 lakehouse architecture, establishing consistent partitioning schemes, schema registries, and Parquet storage tiers.</li>
+          <li><strong>Real-Time Observability Engine:</strong> Architected a high-velocity telemetry pipeline using Apache Flink for stream enrichment, Lambda for hot/cold path routing, DynamoDB for fast state storage, and CloudWatch and Grafana dashboards with automated SQS/SNS and ServiceNow incident triggers.</li>
+          <li><strong>Zero-Downtime Governance &amp; RACI Cutover Framework:</strong> Authored a comprehensive 750+ line database cutover runbook leveraging AWS DMS and Oracle GoldenGate CDC patterns for critical Oracle DB and Postgres workloads, incorporating automated snapshot/replica loading and cross-functional RACI matrices across 8 enterprise stakeholders.</li>
+          <li><strong>Event-Driven Serverless &amp; IAM Security:</strong> Orchestrated asynchronous workflows leveraging EventBridge, SQS, SNS, and API Gateway fronted by CloudFront edge caching; implemented a unified identity model pairing AWS IAM Identity Center with Cognito SAML/OIDC federation for multi-tenant customer isolation.</li>
+          <li><strong>Infrastructure as Code &amp; Storage Tiering:</strong> Standardized Terraform modular configurations across staging and production environments; instituted S3 lifecycle policies (hot/warm/cold tiers), automated cost-allocation tagging, and audit validation against SLA baselines.</li>
         </ul>
 
-        {/* Data Architecture Key Projects */}
-        <div className="subhead">Key Projects – Data Architecture</div>
+        {/* Software Architect */}
+        <div className="role-dates" style={{ marginTop: '5px' }}><strong>Software Architect</strong> (Aug 2023 – Nov 2025)</div>
+        <div className="tech-line">
+          <b>Key Tools:</b> Java 8, Spring Boot, Spring Security, Microservices, TypeScript, Angular, Oracle DB, AWS (Lambda, API Gateway, Cognito, S3), Terraform, SonarQube, Fortify, Python.
+        </div>
         <ul>
-          <li><span className="proj-name">Enterprise Data Migration Runbooks (AWS DMS &amp; Oracle GoldenGate):</span> Authored a 750+ line production migration runbook (RACI across 8 roles) plus a companion on-prem/Azure-to-AWS runbook, including a snapshot/replica-sourced full-load pattern for critical tables and a cost-based DMS-vs-OGG decision framework; published to Confluence for cross-team governance.</li>
-          <li><span className="proj-name">Azure-to-AWS Cross-Cloud Data Lake Ingestion:</span> Authored the architecture document for bringing Azure-hosted Kafka and Oracle workloads into the AWS data lake via Lambda Kafka event-source mapping and OGG CDC over Site-to-Site VPN into Kinesis, preserving the existing MSK-based consumer/alerting pipeline (DynamoDB, SQS, ServiceNow) by simply repointing its trigger source; included NFRs, IAM scoping, observability plan, and alternatives-considered analysis (MSK, Kafka Connect, NiFi, MirrorMaker 2, Direct Connect).</li>
-          <li><span className="proj-name">Flink-Based Device Observability Platform:</span> Defined end-to-end architecture and led delivery of a hot/cold-path device-event and heartbeat observability solution (Flink, Lambda, DynamoDB, ServiceNow alerting), including the Java processing service, monitoring dashboards, and design-approval/validation gates tracked as a dedicated Jira epic.</li>
-          <li><span className="proj-name">Data Platform Governance &amp; Delivery Planning:</span> Defined standardized repository structure and AWS resource/pipeline naming conventions, S3 data-lifecycle (hot/warm/cold) and security/tagging policy, and the data lake test plan; owned scope, architecture, and estimation sign-off for the platform's Jira epics spanning ingestion, observability, and cross-cloud pipeline workstreams.</li>
-          <li><span className="proj-name">MSK Streaming &amp; Multi-Target Sink Architecture:</span> Architected a cross-VPC Kafka/MSK Connect pipeline for device event and heartbeat data, sinking to S3, DynamoDB, and PostgreSQL via a single feature-flagged Terraform module with DLQ error handling and Glue Schema Registry governance.</li>
-          <li><span className="proj-name">Data Lake Modernization &amp; Trip History API Platform:</span> Directed data lake sequencing (raw/staging/analytics) to close a retention-driven data-loss risk, and led discovery/delivery planning for a Trip History API modernization effort spanning CDC, Aurora data availability, and Glue performance remediation against a 5-minute SLA.</li>
-          <li><span className="proj-name">Identity Federation &amp; Multi-Tenant Security Architecture:</span> Designed a two-tier identity model (AWS Managed AD/IAM Identity Center for staff, Cognito with SAML/OIDC for third-party customers) behind a single Lambda authorizer, with token-derived multi-tenant data isolation and production cost modeling.</li>
-          <li><span className="proj-name">Lean Delivery Model &amp; Executive Operating Model Program:</span> Proposed a spec-driven delivery model redefining Architect/EM role boundaries, and delivered an 11-slide Systems Engineering operating model presentation (RACI, governance checkpoints, KPIs) to a mixed executive/technical audience.</li>
+          <li><strong>Operating Model &amp; Delivery Redefinition:</strong> Authored and presented an 11-slide Systems Engineering Operating Model establishing clear role boundaries between Architecture and Engineering Management. Replaced big-bang delivery ambiguity with deterministic design-approval gates, Jira/Confluence tracking, and Architecture Decision Records (ADRs).</li>
+          <li><strong>B2B Program Vertical Ownership:</strong> Acted as chief technical architect for the B2B employer-benefit program portfolio across 20+ Jira epics; governed program-configuration services, automated purse-allocation logic, fixed-fee monthly billing models, and automated shipping integrations with FedEx.</li>
+          <li><strong>Architecture Review Board (ARB) &amp; Governance:</strong> Authored and approved 45+ Confluence-tracked architectural change designs spanning internal user MFA, external third-party concession APIs, and credit-card velocity fraud detection rules.</li>
+          <li><strong>Generative AI &amp; SDLC Innovation:</strong> Architected and deployed RAG-based AI assistants referencing internal OpenAPI/Swagger specifications and Confluence documentation; integrated Claude Code and GitHub Copilot to accelerate feature prototyping and automate static defect analysis.</li>
         </ul>
 
-        {/* Software Architecture Key Projects */}
-        <div className="subhead">Key Projects – Software Architecture</div>
+        {/* Principal Software Engineer */}
+        <div className="role-dates" style={{ marginTop: '5px' }}><strong>Principal Software Engineer</strong> (Nov 2021 – Jul 2023)</div>
+        <div className="tech-line">
+          <b>Key Tools:</b> Java, Spring Boot, REST APIs, Microservices, Oracle SQL, Docker, Jenkins, Fortify SCA, SonarQube.
+        </div>
         <ul>
-          <li><span className="proj-name">B2B Program Vertical Ownership:</span> Acted as architect-of-record for the B2B/employer-benefit program vertical across 20+ epics and capabilities, from initial program-configuration and billing architecture through delivery, notifications, and partner shipping integration — the primary technical and domain authority for that portfolio.</li>
-          <li><span className="proj-name">B2B Program Billing &amp; Funds Pool Architecture:</span> Designed a fare-program product offering model driven by program type and a new fixed-monthly-fee billing type, and authored the privacy impact assessment and change design consolidating funds-pool reload-refund logic so that a purse belongs to a single program.</li>
-          <li><span className="proj-name">Concession &amp; Third-Party Benefit Program Integration:</span> Architected concession rules and invoicing for third-party benefit programs, including automated age-based concession approval/enrollment and attributed fare and invoicing for external benefit-program partners.</li>
-          <li><span className="proj-name">B2B Account &amp; Fraud Controls:</span> Designed a set of B2B account-management and fraud-control enhancements — credit card velocity checks, token/identity status synchronization on member status changes, balance-transfer overrides on card replacement, and membership re-synchronization — alongside a broader B2B integration-gaps remediation effort.</li>
-          <li><span className="proj-name">Multi-Factor Authentication for System Users:</span> Served as one of the approving software architects on the MFA design for internal system users, covering authentication flow and impacted-component sign-off across the platform.</li>
+          <li><strong>High-Availability Core Engineering:</strong> Engineered core transaction subsystems for automated concession eligibility verification, balance transfers on card replacements, and multi-module identity synchronization.</li>
+          <li><strong>DevOps &amp; Technical Mentorship:</strong> Established continuous delivery pipelines with Jenkins and Docker; mentored a 10-member software engineering team on secure coding standards and TDD practices.</li>
         </ul>
       </div>
 
       {/* Cognizant */}
       <div className="role-block">
-        <div className="role-title">Cognizant Technology Solutions, Kolkata</div>
-        <div className="role-dates">Programmer Analyst &rarr; Associate &rarr; Senior Associate (Jun 2006 – Oct 2021)</div>
+        <div className="role-title">Cognizant Technology Solutions, Kolkata, India | Jun 2006 – Oct 2021</div>
+
+        {/* Senior Associate / Architect */}
+        <div className="role-dates"><strong>Senior Associate / Architect</strong> (Jul 2015 – Oct 2021)</div>
         <div className="tech-line">
-          <b>Clients:</b> QVC Inc., JPMorgan Chase (JPMC), Credit Suisse<br />
-          <b>Technologies:</b> Java 8, Spring Boot, Angular 6, TypeScript, SQL Server, DB2, PL1, JCL, VSAM, REXX, CICS, CORBA
+          <b>Clients:</b> JPMorgan Chase (JPMC), Credit Suisse, QVC Inc. | <b>Tech:</b> Java 8, Spring Boot, Angular 6+, TypeScript, SQL Server, DB2, Jenkins, Docker, Git.
         </div>
         <ul>
-          <li>Led end-to-end software design and development for multiple enterprise applications in banking and financial domains, including money market trading, credit processing, and accounting systems.</li>
-          <li>Directed teams in defining solution architecture, establishing reusable frameworks, and maintaining alignment between business and IT objectives.</li>
-          <li>Designed scalable backend systems and REST-based microservices, integrating distributed and mainframe environments for legacy modernization initiatives.</li>
-          <li>Managed Agile transformations, standardizing DevOps toolchains and CI/CD practices using Jenkins, Docker, and Git, significantly improving release cycles and deployment accuracy.</li>
-          <li>Partnered with global client teams to deliver customized application solutions, manage risk, and implement performance enhancements, resulting in improved user satisfaction and reduced production incidents.</li>
-          <li>Executed functional and code reviews, ensuring compliance with design principles, maintainability standards, and security validation through SonarQube and Fortify.</li>
-          <li>Acted as the technical liaison between development, QA, and support teams—facilitating communication and ensuring timely issue resolution across multiple time zones.</li>
-          <li>Developed and delivered prototypes and proof-of-concept applications for clients to validate architectural feasibility and accelerate solution adoption.</li>
-          <li>Championed knowledge-sharing and team enablement, mentoring junior developers, introducing structured review processes, and cultivating a culture of learning and excellence.</li>
+          <li><strong>Institutional Trading Platform (JPMC - MMSY):</strong> Architected high-throughput backend services for institutional money market trading; engineered resilient REST microservices directly enabling institutional client trading and trade reconciliation.</li>
+          <li><strong>Banking Modernization &amp; DevOps (Credit Suisse - GRANIT &amp; KSEC2):</strong> Spearheaded modernization of core banking and credit-approval modules; introduced automated Jenkins/Docker CI/CD pipelines and static code gates via SonarQube and Fortify, slashing deployment cycle times.</li>
+          <li><strong>Automated Test Data Management (TDM 2.0):</strong> Designed and built a self-service test data provisioning platform, compressing testing cycle times from multiple days to minutes and eliminating environment contention.</li>
         </ul>
 
-        <div className="subhead">Key Projects</div>
+        {/* Associate */}
+        <div className="role-dates" style={{ marginTop: '5px' }}><strong>Associate</strong> (Jul 2009 – Jun 2015)</div>
+        <div className="tech-line">
+          <b>Tech:</b> Java, JCL, CICS, DB2, PL1, VSAM, REXX, CORBA, Mainframe (z/OS), UNIX.
+        </div>
         <ul>
-          <li><span className="proj-name">TDM 2.0:</span> Built a self-service web application to automate test data generation, reducing data preparation time from several days to minutes, improving QA efficiency and test readiness.</li>
-          <li><span className="proj-name">MMSY:</span> Led backend design for a money market trading system at JPMC, enabling institutional clients to trade directly via digital interfaces; improved trade throughput and reliability.</li>
-          <li><span className="proj-name">XAMIN:</span> Architected a mainframe-to-UNIX data integration system, automating transfer and reconciliation of financial data between OMNI and XAMIN accounting systems.</li>
-          <li><span className="proj-name">GRANIT &amp; KSEC2 (Credit Suisse):</span> Enhanced core banking applications supporting credit request processing and product catalog management, improving system performance and code maintainability.</li>
+          <li><strong>Financial Data Reconciliation (XAMIN):</strong> Engineered high-volume mainframe-to-UNIX data pipelines automating nightly reconciliation and ledger transfers between OMNI and XAMIN accounting systems.</li>
+          <li><strong>Distributed Tier Integration:</strong> Developed CORBA and Java bridging layers connecting distributed web portals with legacy CICS/DB2 mainframe backends.</li>
+        </ul>
+
+        {/* Programmer Analyst / Trainee */}
+        <div className="role-dates" style={{ marginTop: '5px' }}><strong>Programmer Analyst / Trainee</strong> (Jun 2006 – Jun 2009)</div>
+        <div className="tech-line">
+          <b>Tech:</b> JCL, PL1, COBOL, VSAM, DB2, IBM Utilities.
+        </div>
+        <ul>
+          <li><strong>Core Mainframe Engineering:</strong> Maintained and optimized mission-critical batch processing schedules; authored PL1/REXX scripts and DB2 SQL queries for retail inventory and transaction management.</li>
         </ul>
       </div>
 
-      <div className="footer-band">Personal Details</div>
-      <div className="footer-content">Date of Birth: 25th August 1982</div>
+      {/* Selected Enterprise Architecture Projects */}
+      <div className="section-title">Selected Enterprise Architecture Projects</div>
+      <ul>
+        <li><strong>Cross-Cloud Lakehouse Ingestion:</strong> Ingested Azure Kafka and Oracle CDC data into AWS Kinesis and S3 Lakehouse over dual Site-to-Site VPN; preserved existing downstream consumers while eliminating expensive Direct Connect lines.</li>
+        <li><strong>Real-Time Observability with Flink &amp; Grafana:</strong> Developed hot/cold path event-processing engine handling millions of transit device heartbeats using Apache Flink, AWS Lambda, DynamoDB, CloudWatch, and custom Grafana monitoring panels.</li>
+        <li><strong>Production Zero-Downtime Migration Framework:</strong> Standardized multi-database cutovers using AWS DMS, Oracle GoldenGate (OGG), and automated snapshot validation across critical Oracle DB, DB2, and Postgres instances.</li>
+        <li><strong>Serverless Event-Driven Microservices:</strong> Architected scalable asynchronous decoupled messaging using AWS EventBridge, SQS queues with Dead Letter Queues (DLQ), SNS topic notifications, and API Gateway authorizers.</li>
+      </ul>
+
+      {/* Education & Professional Credentials */}
+      <div className="section-title">Education &amp; Professional Credentials</div>
+      <ul>
+        <li><strong>Master of Science (MS) in Machine Learning &amp; AI (In Progress):</strong> IIIT Bangalore &amp; Liverpool John Moores University (Upgrad)</li>
+        <li><strong>Master of Technology (M.Tech.) in Computer Science (2006):</strong> Indian Institute of Technology (IIT / ISM), Dhanbad</li>
+        <li><strong>Bachelor of Technology (B.Tech.) in Computer Science &amp; Information Technology (2004):</strong> Vignan's Engineering College, JNTU Hyderabad</li>
+      </ul>
     </div>
   );
 };

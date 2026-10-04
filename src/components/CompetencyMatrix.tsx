@@ -1,5 +1,5 @@
 import React from 'react';
-import { competencies, domainExpertise } from '../data/portfolioData';
+import { competencies, domainExpertise, architectureDomains } from '../data/portfolioData';
 import { 
   Database, 
   Cloud, 
@@ -8,7 +8,7 @@ import {
   Server, 
   BrainCircuit, 
   Briefcase,
-  Award,
+  Compass,
   CheckCircle2,
   Sparkles
 } from 'lucide-react';
@@ -23,6 +23,7 @@ export const CompetencyMatrix: React.FC = () => {
       case 'Shield': return <Shield size={20} />;
       case 'Server': return <Server size={20} />;
       case 'BrainCircuit': return <BrainCircuit size={20} />;
+      case 'Compass': return <Compass size={20} />;
       default: return <Briefcase size={20} />;
     }
   };
@@ -33,33 +34,56 @@ export const CompetencyMatrix: React.FC = () => {
         <div className="section-header">
           <div className="section-eyebrow">
             <Shield size={14} />
-            <span>Enterprise Breadth</span>
+            <span>Enterprise Breadth &amp; Technical Governance</span>
           </div>
-          <h2 className="section-title">Core Competencies &amp; Technical Governance</h2>
+          <h2 className="section-title">Technical Skills &amp; Technology Stack</h2>
           <p className="section-subtitle">
-            A balanced enterprise matrix spanning distributed systems design, cloud-native data platforms, legacy modernization, and technical governance.
+            Curated 9-pillar technical architecture matrix and core domain specializations based on 20+ years of high-concurrency enterprise systems delivery.
           </p>
         </div>
 
-        {/* Highlighted Domain Expertise Tile Strip */}
-        <div className="glass-card domain-expertise-strip">
-          <div className="domain-strip-header">
-            <div className="domain-strip-title">
-              <Briefcase size={16} className="text-accent" />
-              <span>Specialized Domain &amp; Industry Expertise</span>
-            </div>
-            <span className="domain-strip-badge">8 Core Business Domains</span>
-          </div>
-          <div className="domain-tiles-cloud">
-            {domainExpertise.map((domain, dIdx) => (
-              <div key={dIdx} className="domain-tile">
-                <span className="domain-tile-bullet">◆</span>
-                <span className="domain-tile-text">{domain}</span>
+        {/* Dual Domain & Architecture Competency Strips */}
+        <div className="competencies-top-strips">
+          {/* Architecture Domains */}
+          <div className="glass-card domain-expertise-strip">
+            <div className="domain-strip-header">
+              <div className="domain-strip-title">
+                <Compass size={16} className="text-accent" />
+                <span>Architecture Domains</span>
               </div>
-            ))}
+              <span className="domain-strip-badge">6 Core Architecture Pillars</span>
+            </div>
+            <div className="domain-tiles-cloud">
+              {architectureDomains.map((domain, dIdx) => (
+                <div key={dIdx} className="domain-tile">
+                  <span className="domain-tile-bullet">◆</span>
+                  <span className="domain-tile-text">{domain}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Domain Specialization */}
+          <div className="glass-card domain-expertise-strip">
+            <div className="domain-strip-header">
+              <div className="domain-strip-title">
+                <Briefcase size={16} className="text-accent" />
+                <span>Domain Specialization</span>
+              </div>
+              <span className="domain-strip-badge">5 Industry Verticals</span>
+            </div>
+            <div className="domain-tiles-cloud domain-tiles-specialization">
+              {domainExpertise.map((domain, dIdx) => (
+                <div key={dIdx} className="domain-tile">
+                  <span className="domain-tile-bullet">◆</span>
+                  <span className="domain-tile-text">{domain}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
+        {/* 9-Pillar Technical Stack Grid */}
         <div className="competencies-grid">
           {competencies.map((comp, idx) => (
             <div key={idx} className="glass-card competency-card">
@@ -84,9 +108,15 @@ export const CompetencyMatrix: React.FC = () => {
       </div>
 
       <style>{`
+        .competencies-top-strips {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin-bottom: 28px;
+        }
+
         .domain-expertise-strip {
           padding: 20px 24px;
-          margin-bottom: 28px;
           background: rgba(18, 35, 63, 0.45);
           border: 1px solid rgba(6, 182, 212, 0.3);
           border-radius: var(--radius-md);
@@ -128,8 +158,12 @@ export const CompetencyMatrix: React.FC = () => {
 
         .domain-tiles-cloud {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 10px;
+        }
+
+        .domain-tiles-specialization {
+          grid-template-columns: repeat(3, 1fr);
         }
 
         .domain-tile {

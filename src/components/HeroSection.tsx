@@ -62,7 +62,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="portrait-image-wrapper">
                 <img 
                   src={contactInfo.photoUrl} 
-                  alt={contactInfo.name} 
+                  alt="Pavan Kumar Ghanta - Enterprise Architecture, Data & Software Architect"
                   className="portrait-img"
                   onError={(e) => {
                     // Fallback if local image fails

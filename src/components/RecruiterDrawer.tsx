@@ -63,7 +63,7 @@ export const RecruiterDrawer: React.FC<RecruiterDrawerProps> = ({ isOpen, onClos
             <div className="candidate-quick-card">
               <img 
                 src={contactInfo.photoUrl} 
-                alt={contactInfo.name} 
+                alt="Pavan Kumar Ghanta - Data & Software Architect"
                 className="drawer-avatar"
                 onError={(e) => {
                   (e.target as HTMLElement).style.display = 'none';
